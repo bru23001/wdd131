@@ -1,0 +1,85 @@
+/* General Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    background-color: #E8F0F2;
+    /* Light Pastel Blue */
+    color: #333333;
+    /* Charcoal Text */
+}
+
+/* Header Styling */
+header {
+    background-color: #3B3B58;
+    /* Soft Navy Blue */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Navigation Menu */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #3B3B58;
+    /* Soft Navy Blue */
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #FF6B6B;
+    /* Bright Coral Accent */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Main Content Layout */
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    /* Main content takes 3 parts, aside takes 1 part */
+    gap: 10px;
+    padding: 20px;
+    background-color: #F4E1D2;
+    /* Light Sand/Beige */
+}
+
+section {
+    background-color: #F4E1D2;
+    /* Light Sand/Beige */
+    padding: 20px;
+    height: 100%;
+    /* Ensures main content takes up full height */
+}
+
+aside {
+    background-color: #FFFFFF;
+    /* White */
+    padding: 20px;
+    height: 100%;
+    /* Ensures aside content takes up full height */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #3B3B58;
+    /* Soft Navy Blue */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
