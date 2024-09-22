@@ -4,11 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <meta name="author" content="Victor J. Brun">
+    <meta name="description" content="WWD 131 - Dynamic Web Fundamentals. The purpose of this website is to
+        demonstrate my prerequisite knowledge by applying HTML and CSS in the design and 
+        development of a home page. In addition, I  will be asked to apply learning 
+        activity concepts including JavaScript to provide some dynamic information. 
+        Author's name: Victor J. Brun" />
+    <title>WDD 131 - Dynamic Web Fundamentals - Victor J. Brun</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-    <h1>WDD 131</h1>
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals - <span>Victor J. Brun</span></h1>
+        <nav>
+            <a href="www.linkedin.com/in/victorjbrun" target="_blank">LinkedIn</a>
+            <a href="https://byui.instructure.com" target="_blank">I-Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/5?lang=eng"
+                target="_blank">Scripture</a>
+            <a href="placeholder">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="about-me">
+                <p>My name is Victor J. Brun. I was born in Spain, but I now reside in Southern Illinois,
+                    USA. I’m happily married to a New Englander, and together we have twin daughters. As a
+                    stay-at-home dad, I find joy in nurturing my family... I mean cooking 😜. I am passionate
+                    about software development and European history. I’ve always been fascinated by technology,
+                    so I decided to pursue a career in software development. I’m currently enrolled in BYU-Idaho’s
+                    Online Learning program to earn a degree in Computer Science and Software Development.</p>
+                <img class="profile" src="images/me.jpg" alt="monkey picture" width="200">
+            </div>
+
+            <div class="country">
+                <h2>Spain</h2>
+                <div class="spain">
+                    <img src="images/spain-flag.jpg" alt="Flag of Spain" width="150">
+                    <p>Spain, located in southwestern Europe, is renowned for its rich history, culture, and natural
+                        beauty.
+                        Known for vibrant cities like Madrid and Barcelona, Spain’s festivals, cuisine, and art
+                        continue to captivate the world.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <div class="resources">
+                <ul>
+                    <li><a href="#">Dev.to Community</a></li>
+                    <li><a href="#">Smashing Magazine</a></li>
+                    <li><a href="#">CSS Tricks</a></li>
+                    <li><a href="#">W3 Schools</a></li>
+                    <li><a href="#">Udemy</a></li>
+                    <li><a href="#">Lorem Picsum Image Placeholder</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>©<span id="current-year"></span> Victor J. Brun 🇪🇸 Spain 🇪🇸</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+
 </body>
 
 </html>
