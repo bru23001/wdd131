@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
 :root {
     --primary-color: #2C3E50;
     --secondary-color: #F39C12;
@@ -5,11 +8,9 @@
     --footer-color: #34495E;
     --border-color: #dfe6e9;
     --card-color: #ECF0F1;
-    --card-hover-color: #D3D3D3;
     --link-color: #2980B9;
     --shadow: #0000001A;
 }
-
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -20,7 +21,14 @@ body {
     color: var(--primary-color);
 }
 
+h1, h2, h3 {
+    font-family: 'Lora', serif;
+    text-align: center;
+    color: var(--primary-color);
+}
+
 p {
+    font-size: 1.1rem;
     padding: 1rem;
 }
 
@@ -38,16 +46,6 @@ h3 {
 
     font-size: 2rem;
     padding: 0.5rem 0;
-
-
-}
-
-h1,
-h2,
-h3 {
-    font-family: 'Lora', serif;
-    text-align: center;
-    color: var(--primary-color)
 }
 
 header {
