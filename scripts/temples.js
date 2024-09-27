@@ -6,6 +6,5 @@ const navigation = document.querySelector("nav");
 
 hamButton.addEventListener("click", () => {
     navigation.classList.toggle("open"); 
-    hamButton.classList.toggle("open"); 
-    hamButton.textContent = hamButton.classList.contains("open") ? "✖" : "≡"; 
+    hamButton.textContent = navigation.classList.contains("open") ? "✖" : "≡"; 
 });
