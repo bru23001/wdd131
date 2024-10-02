@@ -14,12 +14,33 @@
 html, body {
     font-family: var(--font-family);
     background-color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header, footer {
     color: var(--text-color);
     text-align: center;
     padding: 1.5rem;
+    width: 100%;
+    position: fixed;
+    background-color: var(--secondary-color);
+    z-index: 1000;
+}
+
+header {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+}
+
+main {
+    flex-grow: 1;
+    margin-top: 1rem;
+    margin-bottom: 6rem;
 }
   
 h1 {
@@ -61,19 +82,19 @@ h2 {
 
 .col-2 {
     display: grid;
-    grid-gap: 0.5rem;
+    grid-gap: 1.5rem;
     grid-template-columns: 1fr 1fr;
     padding: 1rem;
 }
 
 .label {
     font-weight: bold;
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     text-align: right;
 }
   
 .value {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     text-align: left;
 }
 
@@ -91,18 +112,6 @@ h2 {
     position: absolute;
     right: 3rem;
     top: 1.25rem;
-}
-
-.cls-1 {
-    fill: #231815;
-}
-  
-.cls-2 {
-    fill: #d8bf9e;
-}
-  
-.cls-3 {
-    fill: #f8b62d;
 }
 
 
@@ -141,18 +150,18 @@ h2 {
 
     .info {
         position: absolute;
-        top: 2rem;
-        left: 1rem;
+        top: 200px;
+        left: 40px;
         z-index: 1;
     }
 
     .weather {
         position: absolute;
-        bottom: 2rem;
-        right: 1rem;
-        z-index: 1;
+        bottom: 200px;
+        right: 40px;
     }
 
+    
     #weather-icon {
         display: none;
      }
