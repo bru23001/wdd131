@@ -14,7 +14,9 @@ body {
   font-family: Lato, Helvetica, Arial, sans-serif;
   background-color: var(--red);
 }
-
+#weather-icon {
+  display:block;
+}
 header,
 footer {
   color: white;
