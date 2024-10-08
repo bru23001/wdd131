@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Temple Album website showcasing photos of various temples with navigation and responsive design.">
+    <meta name="author" content="Victor J. Brun">
+    <title>Temple Album</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="screen and (min-width: 740px)">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menu" class="hamburger">☰</button>
+        <nav>
+            <ul>
+              <li><a href="#home" class="active">Home</a></li>
+              <li><a href="#old">Old</a></li>
+              <li><a href="#new">New</a></li>
+              <li><a href="#large">Large</a></li>
+              <li><a href="#small">Small</a></li>
+            </ul>
+          </nav>
+    </header>
+
+    <main>
+        <h2 id="page">Home</h2>
+        <section class="container">
+        </section>
+    </main>
+
+    <footer>
+        <p>©<span id="current-year"></span> Victor J. Brun 🇪🇸 Spain 🇪🇸</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+
+</body>
+
+</html>
