@@ -1,0 +1,34 @@
+/* Header Styles */
+.site-header {
+    background-color: var(--primary-color);
+    padding: var(--spacing-medium) 0;
+}
+
+.site-header .logo {
+float: left;
+}
+
+.site-header .main-navigation {
+float: right;
+}
+
+.site-header .main-navigation ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+.site-header .main-navigation ul li {
+display: inline-block;
+margin-left: var(--spacing-medium);
+}
+
+.site-header .main-navigation ul li a {
+color: var(--light-text-color);
+text-decoration: none;
+transition: color var(--transition-speed) ease;
+}
+
+.site-header .main-navigation ul li a:hover {
+color: var(--secondary-color);
+}

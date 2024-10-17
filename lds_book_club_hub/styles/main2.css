@@ -1,0 +1,309 @@
+/* Root Variables from Chakra UI */
+/* Chakra UI Root Variables */
+:root {
+    --monthly-pick: #d50d7f;
+    --carousel: #f07d25;
+    --new: #faba00;
+    --support: #97ca00;
+    --join-club: #00b1e9;
+    --join-newsletter: #1a8fb0;
+    --links: #006dc0;
+    --footer:#333333;
+    --background-grey: #f5f5f5;
+    --fontSizes-md: 1rem;
+    --fontSizes-lg: 1.125rem;
+    --fontSizes-3xl: 1.875rem;
+    --lineHeights-normal: 1.5;
+}
+
+/* Global Reset and Styling */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-width: 0px;
+    border-style: solid;
+    border-color: var(--footer);
+}
+
+/* Body and Text Styles */
+body {
+    font-family: 'Larsseit', sans-serif;
+    background-color: var(--background-grey);
+    color: var(--footer);
+}
+
+/* Layout: Section Containers */
+section {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--background-grey);
+    border-radius: 8px;
+}
+
+/* Card Component */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+/* General button styling */
+.button {
+    font-family: 'Kievit Extra Bold', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase; /* All caps */
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: grey;
+}
+
+/* Section-Specific Button Colors */
+.purple-button {
+    background-color: #D50D7F;
+}
+  
+.orange-button {
+    background-color: #F07D25;
+}
+  
+.yellow-button {
+    background-color: #FABA00;
+}
+  
+.green-button {
+    background-color: #97CA00;
+}
+  
+.baby-blue-button {
+    background-color: #00B1E9;
+}
+  
+.dark-blue-button {
+    background-color: #1A8FB0;
+}
+  
+/* Link Style */
+a {
+    color: var(--links);
+    text-decoration: none;
+    font-weight: bold;
+}
+  
+  a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--orange);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--links);
+    font-size: var(--fontSizes-md);
+}
+
+.carousel-book {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.carousel-book.active {
+    display: block;
+}
+
+
+
+
+/* Grid Layout for "What's New" Section */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.content-grid article {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+}
+/* Newsletter Form */
+.newsletter form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.newsletter input {
+    padding: 10px;
+    border: 1px solid var(--footer);
+    width: 300px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: var(--join-newsletter);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: grey;
+}
+
+.join-club {
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.btn {
+    background-color: #FF6347;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #FF4500;
+}
+.sidebar-left, .sidebar-right {
+    width: 25%;
+    padding: 1rem;
+}
+
+.main-content {
+    width: 50%;
+    padding: 1rem;
+}
+
+/* Image Gallery */
+.featured-section {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.featured-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+img.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    opacity: 1;
+}
+
+img.lazy-load {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+img.lazy-load.loaded {
+    opacity: 1;
+}
+
+/* Call to Action */
+.call-to-action {
+    background-color: #ffcf43;
+    padding: 2rem;
+    text-align: center;
+}
+
+.cta-button {
+    background-color: #002fa4;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 5.25rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: rgba(0, 47, 164, 0.75);
+}
+
+
+
+
+
+
+
+/* Input field error styling */
+.input-error {
+    border: 1px solid red;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--footer);
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.social-media-links {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.social-icon {
+    margin-right: 1rem;
+}
+/* Footer Style */
+.footer {
+    background-color: #333333;
+    color: var(--footer);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

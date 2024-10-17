@@ -1,0 +1,49 @@
+/* Content Section Styles */
+.content-section {
+    padding: var(--spacing-large) 0;
+  }
+  
+  .content-section.monthly-pick {
+    background-color: var(--background-color);
+    text-align: center;
+  }
+  
+  .content-section.monthly-pick img {
+    max-width: 300px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px var(--shadow-color);
+  }
+  
+  /* Newsletter Section */
+  .newsletter-section {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: var(--spacing-large) 0;
+  }
+  
+  .newsletter-section form {
+    margin-top: var(--spacing-medium);
+  }
+  
+  .newsletter-section input[type="email"] {
+    padding: var(--spacing-small);
+    width: 300px;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    border: none;
+    outline: none;
+  }
+  
+  .newsletter-section button {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    border: none;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease;
+  }
+  
+  .newsletter-section button:hover {
+    background-color: var(--accent-color);
+  }

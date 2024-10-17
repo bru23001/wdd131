@@ -1,0 +1,30 @@
+/* Hero Section Styles */
+.hero-section {
+    background: url('path-to-your-hero-image.jpg') no-repeat center center/cover;
+    color: var(--light-text-color);
+    text-align: center;
+    padding: var(--spacing-large) 0;
+    position: relative;
+ }
+  
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+  
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+  
+.hero-section h1 {
+    font-family: var(--heading-font-family);
+    font-size: 3em;
+    margin-bottom: var(--spacing-medium);
+}

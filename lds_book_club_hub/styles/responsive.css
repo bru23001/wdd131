@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+    .site-header .main-navigation ul li {
+      display: block;
+      margin: var(--spacing-small) 0;
+    }
+  
+    .newsletter-section input[type="email"],
+    .newsletter-section button {
+      width: 100%;
+      border-radius: var(--border-radius);
+      margin-bottom: var(--spacing-small);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid-item {
+      flex: 0 0 100%;
+    }
+  }

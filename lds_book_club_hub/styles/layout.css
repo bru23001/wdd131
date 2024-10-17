@@ -1,0 +1,81 @@
+/* Layout Helpers */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-medium);
+}
+
+/* Grid System */
+.content-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: var(--spacing-medium);
+}
+
+.grid-item {
+background-color: var(--light-text-color);
+box-shadow: 0 2px 4px var(--shadow-color);
+border-radius: var(--border-radius);
+overflow: hidden;
+transition: transform var(--transition-speed) ease;
+}
+
+.grid-item:hover {
+transform: translateY(-5px);
+}
+
+.grid-item img {
+width: 100%;
+height: auto;
+object-fit: cover;
+}
+
+.grid-item-content {
+padding: var(--spacing-medium);
+}
+
+/* Flexbox for simpler layouts */
+.flex-container {
+display: flex;
+flex-wrap: wrap;
+gap: var(--spacing-medium);
+}
+
+/* Two-column layout */
+.two-column {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: var(--spacing-medium);
+}
+
+/* Three-column layout */
+.three-column {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: var(--spacing-medium);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.two-column,
+.three-column {
+    grid-template-columns: 1fr;
+}
+}
+
+/* Utility classes */
+.full-width {
+width: 100%;
+}
+
+.text-center {
+text-align: center;
+}
+
+.mb-medium {
+margin-bottom: var(--spacing-medium);
+}
+
+.mt-medium {
+margin-top: var(--spacing-medium);
+}

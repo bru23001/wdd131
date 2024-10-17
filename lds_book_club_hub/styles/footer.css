@@ -1,0 +1,7 @@
+/* Footer Styles */
+.site-footer {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: var(--spacing-medium) 0;
+  }
