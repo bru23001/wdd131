@@ -1,76 +1,60 @@
+/*====================================================================================
+====================================MAIN_JS===========================================
+====================================================================================*/
+
+/** 
+ * This script handles various functionalities for the Your Book Club website,
+ * including navigation, smooth scrolling, and dynamic content updates.
+ */
+
+
 document.addEventListener('DOMContentLoaded', function() {
 
-    // Video play button functionality
-    document.querySelector('.video-play-button').addEventListener('click', function() {
-        var overlay = this.closest('.video-overlay');
-        var iframe = overlay.previousElementSibling;
-        iframe.src += "&autoplay=1";
-        overlay.style.display = 'none';
-    });
+    //=====================================NAVIGATION================================
+    document.querySelector('a[href="#home"]').setAttribute('href', 'home.html');
+    document.querySelector('a[href="#monthly-pick"]').setAttribute('href', "monthly-pick.html");
+    document.querySelector('a[href="#our-picks"]').setAttribute('href', "our-picks.html");
+    document.querySelector('a[href="#about"]').setAttribute('href', "about-us.html");
+    document.querySelector('a[href="#get-involved"]').setAttribute('href', "get-involved.html");
+    document.querySelector('a[href="#contact"]').setAttribute('href', "contact-us.html");
 
-    // Mobile menu toggle
-    document.querySelector('.rev-burger').addEventListener('click', function() {
-        this.classList.toggle('open');
-        document.querySelector('nav ul').classList.toggle('show');
-    });
-
-    // Smooth scroll functionality
-    document.querySelector('.rev-scroll-btn').addEventListener('click', function() {
-        window.scrollTo({
-            top: window.innerHeight,
-            behavior: 'smooth'
+    //=============================GRID_ITEM_NAVIGATION=============================
+    // Add click event listeners to grid items for navigation
+    const gridItems = document.querySelectorAll('.grid-item');
+    gridItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const pageUrl = this.getAttribute("data-href");
+            if (pageUrl) {
+                window.location.href = pageUrl;
+            } else {
+                console.log("No URL specified for this item.");
+            }
         });
     });
 
-    // Video control button functionality
-    document.querySelector('.rev-control-btn').addEventListener('click', function() {
-        var iframe = document.querySelector('.video-container iframe');
-        iframe.src += "&autoplay=1";
-        this.style.display = 'none';
+    //=============================UPDATE_FOOTER====================================
+    // Update footer with current year and last modified date
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+    document.getElementById("last-modified").textContent = document.lastModified;
+
+    //=============================HAMBURGER_MENU===================================
+    // Handle hamburger menu functionality
+    const hamButton = document.querySelector("#menu");
+    const navigation = document.querySelector("nav"); 
+
+    hamButton.addEventListener("click", () => {
+        navigation.classList.toggle("open"); 
+        hamButton.textContent = navigation.classList.contains("open") ? "✖" : "≡"; 
     });
 
-    // Review form submission
-    document.getElementById('review-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        document.getElementById('review-loader').style.display = 'block';
-        // Simulate form submission
-        setTimeout(function() {
-            document.getElementById('review-loader').style.display = 'none';
-            alert('Thank you for your review!');
-        }, 2000);
-    });
-
-    // Book slider functionality
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.book-slide');
-    const bullets = document.querySelectorAll('.nav-bullet');
-
-    function showSlide(n) {
-        slides[currentSlide].style.display = 'none';
-        bullets[currentSlide].classList.remove('selected');
-        currentSlide = (n + slides.length) % slides.length;
-        slides[currentSlide].style.display = 'block';
-        bullets[currentSlide].classList.add('selected');
-    }
-
-    document.querySelector('.left-arrow').addEventListener('click', () => showSlide(currentSlide - 1));
-    document.querySelector('.right-arrow').addEventListener('click', () => showSlide(currentSlide + 1));
-    bullets.forEach((bullet, index) => {
-        bullet.addEventListener('click', () => showSlide(index));
-    });
-
-    // Tab functionality
-    const tabs = document.querySelectorAll('.nav-tab');
-    tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            tabs.forEach(t => t.classList.remove('selected'));
-            this.classList.add('selected');
-            // Here you would typically update the content based on the selected tab
+     //=============================SMOOTH_SCROLL====================================
+    // Implement smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     });
-
-    // Initialize the slider
-    showSlide(0);
-
-    
 });

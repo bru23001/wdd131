@@ -1,19 +1,110 @@
+/*====================================================================================
+====================================RESPONSIVE========================================
+====================================================================================*/
+
+@media (max-width: 1024px) {
+    .two-column {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media (max-width: 768px) {
-    .site-header .main-navigation ul li {
-      display: block;
-      margin: var(--spacing-small) 0;
+    header .flex-container {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--primary-color);
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    header .flex-container.open {
+        display: flex;
+    }
+
+    header > :first-child {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: var(--primary-color);
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        padding: 0.5rem;
+    }
+
+    header .flex-container.open > * {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    header .flex-container > *:not(.cta-button-1):not(.cta-button-2) {
+        display: none;
+    }
+
+    header .flex-container a {
+        color: white;
+        text-decoration: none;
+    }
+
+    header .flex-container a:hover {
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .hamburger-menu {
+        display: block;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1000;
     }
   
     .newsletter-section input[type="email"],
     .newsletter-section button {
-      width: 100%;
-      border-radius: var(--border-radius);
-      margin-bottom: var(--spacing-small);
+        width: 100%;
+        border-radius: var(--border-radius);
+        margin-bottom: var(--spacing-small);
     }
-  }
-  
-  @media (max-width: 480px) {
+
+    .cta-button-1,
+    .cta-button-2 {
+        display: block;
+        width: 100%;
+        margin-bottom: var(--spacing-small);
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
     .grid-item {
-      flex: 0 0 100%;
+        width: 100%;
     }
-  }
+
+    .hero-section,
+    .content-section {
+        padding: var(--spacing-medium);
+    }
+
+    .book-showcase img {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-item {
+        flex: 0 0 100%;
+    }
+}

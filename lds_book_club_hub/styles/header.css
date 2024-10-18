@@ -1,34 +1,38 @@
-/* Header Styles */
-.site-header {
+/*====================================================================================
+====================================HEADER============================================
+====================================================================================*/
+
+header {
     background-color: var(--primary-color);
     padding: var(--spacing-medium) 0;
 }
 
-.site-header .logo {
-float: left;
+header .logo {
+    float: left;
 }
 
-.site-header .main-navigation {
-float: right;
+header nav {
+    float: right;
 }
 
-.site-header .main-navigation ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.site-header .main-navigation ul li {
-display: inline-block;
-margin-left: var(--spacing-medium);
+header nav ul li {
+    display: inline-block;
+    margin-left: var(--spacing-medium);
 }
 
-.site-header .main-navigation ul li a {
-color: var(--light-text-color);
-text-decoration: none;
-transition: color var(--transition-speed) ease;
+header nav ul li a {
+    color: var(--light-text-color);
+    font-size: var(--nav-font-size);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
 }
 
-.site-header .main-navigation ul li a:hover {
-color: var(--secondary-color);
+header nav ul li a:hover {
+    color: var(--secondary-color);
 }

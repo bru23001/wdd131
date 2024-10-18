@@ -1,11 +1,14 @@
-/* Hero Section Styles */
+/*====================================================================================
+====================================HERO_SECTION======================================
+====================================================================================*/
+
 .hero-section {
-    background: url('path-to-your-hero-image.jpg') no-repeat center center/cover;
+    background-color: var(--secondary-color);
     color: var(--light-text-color);
     text-align: center;
     padding: var(--spacing-large) 0;
     position: relative;
- }
+}
   
 .hero-section::before {
     content: '';
@@ -14,7 +17,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: black;
     z-index: 1;
 }
   

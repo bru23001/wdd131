@@ -1,0 +1,39 @@
+/*====================================================================================
+====================================NEWSLETTER_SECTION================================
+====================================================================================*/
+
+.newsletter-section {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: var(--spacing-large) 0;
+}
+  
+.newsletter-section form {
+    display: flex;
+    gap: var(--spacing-small);
+    justify-content: center;
+    margin-top: var(--spacing-medium);
+}
+  
+.newsletter-section input[type="email"] {
+    padding: var(--spacing-small) var(--spacing-medium);
+    width: 300px;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    border: none;
+    outline: none;
+}
+  
+.newsletter-section button {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    border: none;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease;
+}
+  
+.newsletter-section button:hover {
+    background-color: var(--accent-color-1);
+}

@@ -1,5 +1,14 @@
-// lazy-load.js
+/*====================================================================================
+====================================LAZY_LOAD_JS======================================
+====================================================================================*/
+
+/** 
+ * This script implements lazy loading for images on the Your Book Club website.
+ * It uses the Intersection Observer API to load images only when they enter the viewport.
+ */
+
 document.addEventListener('DOMContentLoaded', () => {
+    //=============================LAZY_LOAD_IMAGES=================================
     const lazyImages = document.querySelectorAll('img.lazy-load');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
