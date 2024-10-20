@@ -5,6 +5,13 @@
 header {
     background-color: var(--primary-color);
     padding: var(--spacing-medium) 0;
+    text-align: center;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    z-index: 1000;
 }
 
 header .logo {
@@ -13,12 +20,18 @@ header .logo {
 
 header nav {
     float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+    position: static
 }
 
 header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display:flex;
 }
 
 header nav ul li {
@@ -35,4 +48,18 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: var(--secondary-color);
+}
+
+header nav ul li a.active  {
+    color: var(--secondary-color);
+}
+#menu {
+    
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 20px;
 }

@@ -8,18 +8,6 @@
     <meta name="author" content="Victor J. Brun">
         
     <title>Your Book Club - Connecting Readers, Inspiring Minds</title>
-    
-    <!-- <link rel="stylesheet" href="styles/variables.css">
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/typography.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/components.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/hero.css">
-    <link rel="stylesheet" href="styles/content-sections.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/utilities.css">
-    <link rel="stylesheet" href="styles/responsive.css"> -->
 
     <link rel="stylesheet" href="styles/main3.css">
 
@@ -32,9 +20,11 @@
 
 <body>
     <header>
+        <button id="menu" class="hamburger">☰</button>
+
         <div class="container flex-container">
-            <button id="menu" class="hamburger-menu">☰</button>
             <nav>
+
                 <ul>
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#monthly-pick">Monthly Pick</a></li>
@@ -56,9 +46,16 @@
 <!------------------------------------------ Hero Section -------------------------------------------------> 
 <!--------------------------------------------------------------------------------------------------------->       
         <section class="hero-section">
-            <div class="container text-center">
-                <div class="logo">
-                    <img src="images/bookclub.png" alt="Your Book Club Logo">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="logo-container">
+                        <div class="logo">
+                            <img src="images/bookclub.png" alt="Your Book Club Logo">
+                        </div>
+                    </div>
+                    <div class="tagline">
+                        <h1>Connecting Readers,<br>Inspiring Minds</h1>
+                    </div>
                 </div>
             </div>
         </section>
@@ -67,9 +64,10 @@
 <!--------------------------------------------------------------------------------------------------------->
         <section id="monthly-pick" class="content-section monthly-pick">
             <div class="container">
-                <h1 id="hero-title">Connecting Readers, Inspiring Minds</h1>
-                <h2 id="monthly-pick-title" class="text-center mb-medium">Book of the Month</h2>
-                <div class="two-column">
+                <div class="monthly-pick-header">
+                    <h2>Book of the Month</h2>
+                </div>
+                <div class="monthly-pick-content two-column">
                     <div class="book-showcase">
                         <img src="images/Grimms%20Complete%20Fairy%20Tales%202%20copy-300x300.png" alt="Cover of Society of Lies">
                     </div>
@@ -90,7 +88,9 @@
 <!--------------------------------------------------------------------------------------------------------->
         <section id="featured-books" class="content-section">
             <div class="container">
-                <h2 id="featured-books-title" class="text-center mb-medium">Recomended Books</h2>
+                <div class="featured-books-header">
+                    <h2>Recommended Books of the Month</h2>
+                </div>
                 <div class="content-grid">
                     <div class="grid-item" data-href="#book-1">
                         <img src="images/Grimms%20Complete%20Fairy%20Tales%202%20copy-300x300.png" alt="Cover of Book Title 1">
@@ -178,7 +178,7 @@
         </div>
     </footer>
 
-    <script src="scripts/main3.js"></script>
+    <script src="scripts/main.js"></script>
     <script src="scripts/carousel.js"></script>
     <script src="scripts/form-validation.js"></script>
     <script src="scripts/book-filter.js"></script>

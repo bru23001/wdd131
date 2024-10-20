@@ -6,7 +6,7 @@
     background-color: var(--secondary-color);
     color: var(--light-text-color);
     text-align: center;
-    padding: var(--spacing-large) 0;
+    padding: var(--spacing-medium) 0;
     position: relative;
 }
   
@@ -17,7 +17,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: black;
+    background: var(--secondary-color);
     z-index: 1;
 }
   
@@ -31,3 +31,24 @@
     font-size: 3em;
     margin-bottom: var(--spacing-medium);
 }
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-medium);
+}
+
+.logo-container {
+    flex-shrink: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--light-text-color);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 24px;
+}
+

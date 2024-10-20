@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--====================================================================================#===============================HEAD_SECTION===============================#====================================================================================-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="Product review form example for WDD 131">
+    <meta name="author" content="Rubia M. Francesco">
+
+    <!-- Google Fonts Preconnection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!--=============================STYLESHEET_INCLUSION=============================-->
+    <!-- Include external CSS file for styling the form -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <main>
+        <!--====================================================================================#===============================FORM_SECTION===============================#====================================================================================-->
+        <form action="review.html" method="get">
+            <div class="container">
+                <h1>Product Review</h1>    
+                <!-- Product Selection Dropdown -->
+                <label for="product">Product Name</label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Choose a Product ...</option>
+                </select>
+            </div>
+
+            <div class="container">
+                <!-- Rating Selection -->
+                <label for="rating">Overall Rating</label>
+                <div class="stars-section">
+                    <input type="radio" id="star1" name="rating" value="1" required>
+                    <label for="star1" class="rating-label">★</label>
+                    <input type="radio" id="star2" name="rating" value="2" required>
+                    <label for="star2" class="rating-label">★★</label>
+                    <input type="radio" id="star3" name="rating" value="3" required>
+                    <label for="star3" class="rating-label">★★★</label>
+                    <input type="radio" id="star4" name="rating" value="4" required>
+                    <label for="star4" class="rating-label">★★★★</label>
+                    <input type="radio" id="star5" name="rating" value="5" required>
+                    <label for="star5" class="rating-label">★★★★★</label>
+                </div>
+            </div>
+
+            <div class="container">
+                <!-- Date of Installation -->
+                <label for="install-date">Date of Installation</label>
+                <input type="date" id="install-date" name="install-date" required>
+            </div>
+
+            <div class="container">
+                <!-- Feature Selection Checkboxes -->
+                <label>Which features did you find useful in the product? <br> (Check all that apply)</label>
+                <div class="checkbox-section">
+                    <input type="checkbox" id="durability" name="durability" value="durability">
+                    <label for="durability">Durability</label>
+                    <input type="checkbox" id="ease" name="ease" value="ease">
+                    <label for="ease">Ease of Use</label>
+                    <input type="checkbox" id="performance" name="performance" value="performance">
+                    <label for="performance">Performance</label>
+                    <input type="checkbox" id="design" name="design" value="design">
+                    <label for="design">Design</label>
+                </div>
+            </div>
+
+            <div class="container">
+                <!-- Written Review Section -->
+                <label for="review">Written Review (Optional)</label>
+                <textarea id="review" name="review" rows="4"></textarea>
+            </div>
+
+            <div class="container">
+                <!-- Username Input -->
+                <label for="username">Your Name (Optional)</label>
+                <input type="username" id="username" name="username">
+            </div>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+
+    <!--====================================================================================#===============================FOOTER_SECTION===============================#====================================================================================-->
+    <footer>
+        <p>©<span id="current-year"></span> Victor J. Brun 🇪🇸 Spain 🇪🇸</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+
+    <!--=============================SCRIPT_INCLUSION=============================-->
+    <!-- Include external JavaScript file to manage dynamic content -->
+    <script src="scripts/form.js"></script>
+</body>
+
+</html>
