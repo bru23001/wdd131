@@ -59,7 +59,7 @@ input[type="review"],
 input[type="checkbox"],
 input[type="date"],
 input[type="radio"],
-input[type="username"],
+input[type="text"],
 textarea,
 select {
     border-radius: 4px;
