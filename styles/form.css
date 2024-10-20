@@ -1,5 +1,4 @@
-/*====================================================================================#===============================GLOBAL_STYLES===============================#====================================================================================*/
-/* Root variables for background colors and borders */
+
 :root {
     --back1: rgba(44, 4, 44, 1);
     --back2: rgba(44, 4, 44, .2);
@@ -7,34 +6,46 @@
     --background1: #f4f4f4;
     --background2: #f8f6fc;
     --background3: #4b034b;
-}
-
-/* Apply consistent margins, paddings, and box-sizing across all elements */
-* {
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/*====================================================================================#===============================LAYOUT_AND_TEXT_STYLES===============================#====================================================================================*/
-/* Set font and background color for the HTML and body */
-html,
-body {
-    font-family: 'Lato', 'Arial', sans-serif; /* Fallback fonts added */
-    background-color: var(--background1);
-}
-
-/* Header and footer styles */
-header,
-footer {
+  }
+  
+  html,
+  body {
+    font-family: Lato;
+    background-color:var(--background1)
+  }
+  
+  header,
+  footer {
     color: white;
     background-color: var(--back1);
     text-align: center;
     padding: 1rem;
-}
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    background-color: var(--background3);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  form {
+    margin: 1rem auto;
+    border: 1px solid var(--border);
+    padding: 1rem;
+    background-color: var(--back2);
+    border-radius: 5px;
+    max-width: 500px;
+  }
 
-/*====================================================================================#===============================FORM_AND_CONTAINER_STYLES===============================#====================================================================================*/
-/* Form container */
 .container {
     background-color: var(--background2);
     max-width: 600px;
@@ -45,7 +56,6 @@ footer {
     border: 1px solid #ddd;
 }
 
-/* Label styles */
 label {
     display: block;
     margin-bottom: 10px;
@@ -54,7 +64,6 @@ label {
     font-weight: 700;
 }
 
-/* Input and select field styles */
 input[type="review"],
 input[type="checkbox"],
 input[type="date"],
@@ -74,19 +83,80 @@ select {
 
 input:focus {
     outline: 1px solid #999;
+  }
+
+  input[type="checkbox"], input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+  }
+
+  textarea {
+    height: 6rem;
+  }
+
+
+
+  .checkbox-section {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    width: max-content;
+  }
+
+  .checkbox-section label {
+    margin-left: .5rem;
+    margin-right: 15px;
+  
+  }
+.stars-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5px;
 }
 
-/* Checkbox styles with hover effect */
+.rating-label {
+    margin-right: 15px;
+    font-size: 18px;
+    color: var(--background3);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+
+h1 {
+    background-color: #4b034b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+}
+
+
+
+
+
+
+
+
 .checkbox-section input[type="checkbox"] {
     border-radius: 3px;
     cursor: pointer;
+} 
+.checkbox-section input[type="checkbox"]:checked::before {
+    content: '\2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-weight: bold;
 }
 
-.checkbox-section input[type="checkbox"]:hover {
-    background-color: #e0e0e0; /* Hover effect added */
-}
-
-/* Submit button styles */
 input[type="submit"] {
     background-color: var(--background3);
     color: white;
@@ -98,22 +168,24 @@ input[type="submit"] {
     font-size: larger;
     width: 100%;
     padding: .5rem;
+      
 }
 
 input[type="submit"]:hover {
     background-color: #650665;
 }
 
-/* Footer styles */
 footer {
     text-align: center;
     padding: 10px 0;
     font-size: 18px;
     color: var(--background2);
-}
+
+} 
 
 @media (min-width: 600px) {
+
     h1 {
       font-size: 2rem;
     }
-}
+} 
