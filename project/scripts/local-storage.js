@@ -7,7 +7,7 @@
  */
 
 // Retrieve favorite books from local storage or initialize an empty array
-const favoriteBooks = JSON.parse(localStorage.getItem('favoriteBooks')) || [];
+const favoriteBooks = JSON.parse(localStorage.getItem("favoriteBooks")) || [];
 
 //=============================ADD_FAVORITE========================================
 /**
@@ -17,11 +17,11 @@ const favoriteBooks = JSON.parse(localStorage.getItem('favoriteBooks')) || [];
 function addFavorite(bookId) {
     if (!favoriteBooks.includes(bookId)) {
         favoriteBooks.push(bookId);
-        localStorage.setItem('favoriteBooks', JSON.stringify(favoriteBooks));
-        alert('Book added to favorites!');
+        localStorage.setItem("favoriteBooks", JSON.stringify(favoriteBooks));
+        alert("Book added to favorites!");
         updateFavorites();
     } else {
-        alert('This book is already in your favorites.');
+        alert("This book is already in your favorites.");
     }
 }
 
@@ -30,8 +30,8 @@ function addFavorite(bookId) {
 // Updates the favorites section in the DOM
 
 function updateFavorites() {
-    const favoriteSection = document.getElementById('favorites-section');
-    favoriteSection.innerHTML = ''; // Clear previous content
+    const favoriteSection = document.getElementById("favorites-section");
+    favoriteSection.innerHTML = "";
     favoriteBooks.forEach((bookId) => {
         const book = document.getElementById(bookId);
         if (book) {
@@ -41,4 +41,4 @@ function updateFavorites() {
 }
 
 // Load favorites on page load
-document.addEventListener('DOMContentLoaded', updateFavorites);
+document.addEventListener("DOMContentLoaded", updateFavorites);

@@ -6,19 +6,22 @@
 //This script handles form validation for the newsletter signup on the Your Book Club website.
 
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
     // Elements
-    const form = document.getElementById('newsletter-form');
-    const emailInput = document.getElementById('email-input');
-    const errorMessage = document.createElement('span');
-    errorMessage.classList.add('error-message');
-    emailInput.parentNode.insertBefore(errorMessage, emailInput.nextSibling);
+    const form = document.getElementById("newsletter-form");
+    const emailInput = document.getElementById("email");
 
+    let errorMessage = document.querySelector(".error-message");
+    if (!errorMessage) { 
+        errorMessage = document.createElement("span");
+        errorMessage.classList.add("error-message");
+        emailInput.parentNode.insertBefore(errorMessage, emailInput.nextSibling);
+    }
     // Regular expression for basic email pattern
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     //=============================REAL_TIME_VALIDATION=============================
-    emailInput.addEventListener('input', () => {
+    emailInput.addEventListener("input", () => {
         if (emailInput.value === "") {
             showError("Email is required.");
         } else if (!emailPattern.test(emailInput.value)) {
@@ -29,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //=============================FORM_SUBMISSION==================================
-    form.addEventListener('submit', (event) => {
+    form.addEventListener("submit", (event) => {
         if (!emailPattern.test(emailInput.value)) {
             event.preventDefault();
             showError("Please enter a valid email address.");
@@ -45,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     function showError(message) {
         errorMessage.textContent = message;
-        emailInput.classList.add('input-error');
+        emailInput.classList.add("input-error");
     }
 
     //=============================HIDE_ERROR=======================================
@@ -54,6 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function hideError() {
         errorMessage.textContent = "";
-        emailInput.classList.remove('input-error');
+        emailInput.classList.remove("input-error");
     }
 });

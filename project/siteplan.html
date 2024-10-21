@@ -160,9 +160,12 @@
             <div class="container text-center">
                 <h3 id="newsletter-title">Join the Newsletter</h3>
                 <p>Dive into the latest from Your Book Club</p>
-                <form>
-                    <input type="email" placeholder="Enter your email" required>
-                    <button type="submit" class="cta-button-1">▶︎▶︎ Subscribe</button>
+                <form id="newsletter-form">
+                    <div class="input-container">
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                        <button type="submit" class="cta-button-1">▶︎▶︎ Subscribe</button>
+                    </div>  
+                    <span class="error-message"></span>  
                 </form>
             </div>
         </section>
