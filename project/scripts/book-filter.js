@@ -2,9 +2,9 @@
 ====================================BOOK_FILTER_JS====================================
 ====================================================================================*/
 
-/** 
- * This script provides search functionality for books on the Your Book Club website.
- */
+
+//This script provides search functionality for books on the Your Book Club website.
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-input');

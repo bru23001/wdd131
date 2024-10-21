@@ -26,9 +26,9 @@ function addFavorite(bookId) {
 }
 
 //=============================UPDATE_FAVORITES====================================
-/**
- * Updates the favorites section in the DOM
- */
+
+// Updates the favorites section in the DOM
+
 function updateFavorites() {
     const favoriteSection = document.getElementById('favorites-section');
     favoriteSection.innerHTML = ''; // Clear previous content

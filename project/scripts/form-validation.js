@@ -2,9 +2,9 @@
 ====================================FORM_VALIDATION_JS================================
 ====================================================================================*/
 
-/** 
- * This script handles form validation for the newsletter signup on the Your Book Club website.
- */
+
+//This script handles form validation for the newsletter signup on the Your Book Club website.
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // Elements
@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //=============================HIDE_ERROR=======================================
-    /**
-     * Hides the error message
-     */
+    
+    // Hides the error message
+    
     function hideError() {
         errorMessage.textContent = "";
         emailInput.classList.remove('input-error');

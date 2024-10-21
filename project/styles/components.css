@@ -2,7 +2,7 @@
 ====================================COMPONENTS========================================
 ====================================================================================*/
 
-/* Button Styles */
+/* =============================Button Styles====================================== */
 .cta-button-1, .cta-button-2 {
   display: inline-block;
   padding: var(--button-padding);
@@ -44,7 +44,7 @@
   transform: translateY(0);
 }
 
-/* Star Rating Styles */
+/* ================================Star Rating Styles========================== */
 .star-rating {
   display: inline-block;
   font-family: 'Font Awesome 5 Free';
@@ -83,7 +83,7 @@
   color: #db7501;
 }
 
-/* Loader Styles */
+/* ======================Loader Styles=================================== */
 .loader {
   width: 40px;
   height: 40px;

@@ -2,9 +2,9 @@
 ====================================CAROUSEL_JS=======================================
 ====================================================================================*/
 
-/** 
- * This script implements a book carousel feature for the Your Book Club website.
- */
+
+//This script implements a book carousel feature for the Your Book Club website.
+
 
 document.addEventListener('DOMContentLoaded', () => {
   // Select elements needed for carousel functionality
@@ -28,14 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //=============================PREVIOUS_BUTTON==================================
   prevButton.addEventListener('click', () => {
-      // Calculate the new index for previous book, wrapping around if needed
+      // Calculate new index previous book, wrapping around if needed
       currentIndex = (currentIndex - 1 + books.length) % books.length;
       showBook(currentIndex);
   });
 
   //=============================NEXT_BUTTON=====================================
   nextButton.addEventListener('click', () => {
-      // Calculate the new index for next book, wrapping around if needed
+      // Calculate new index next book, wrapping around if needed
       currentIndex = (currentIndex + 1) % books.length;
       showBook(currentIndex);
   });

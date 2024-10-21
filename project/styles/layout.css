@@ -9,7 +9,7 @@
     position: relative;
 }
 
-/* Grid System */
+/* ==============================Grid System ==================================*/
 .content-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -39,7 +39,7 @@
     padding: var(--spacing-medium);
 }
 
-/* Flexbox for simpler layouts */
+/* ==================Flexbox for simpler layouts ==================*/
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -47,21 +47,21 @@
     align-items: center;
 }
 
-/* Two-column layout */
+/* ========================Two-column layout====================== */
 .two-column {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-medium);
 }
 
-/* Three-column layout */
+/* =======================Three-column layout ======================*/
 .three-column {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-medium);
 }
 
-/* Utility classes */
+/* ========================Utility classes ==========================*/
 .full-width {
     width: 100%;
 }
