@@ -40,7 +40,7 @@
                     <li><a href="must-reads.html">Our Picks</a></li>
                     <li><a href="about-us.html">About Us</a></li>
                     <li><a href="join-us.html">Get Involved</a></li>
-                    <li><a href="join-us.html">Contact</a></li>
+                    <li><a href="join-us.html"class="active">Contact</a></li>
                 </ul>
             </nav>
             <div>
@@ -69,98 +69,46 @@
                 </div>
             </div>
         </section>
-        <!--------------------------------------------------------------------------------------------------------->
-        <!------------------------------------------ Monthly Pick Section ----------------------------------------->
-        <!--------------------------------------------------------------------------------------------------------->
-        <section id="monthly-pick" class="content-section monthly-pick">
+        <!-- Contact Form Section -->
+        <section class="content-section">
             <div class="container">
-                <div class="monthly-pick-header">
-                    <h2>Book of the Month</h2>
-                </div>
-                <div class="monthly-pick-content two-column">
-                    <div class="book-showcase">
-                        <img src="images/Grimms%20Complete%20Fairy%20Tales%202%20copy-300x300.png"
-                            alt="Cover of Society of Lies">
-                    </div>
-                    <div class="book-details">
-                        <h3>Society of Lies</h3>
-                        <div class="star-rating">
-                            <span style="width: 90%;"></span>
-                        </div>
-                        <p>A dark academia thriller uncovering the truth about a secret society.</p>
-                        <a href="monthly-pick.html" class="cta-button-1 mt-medium">Discover the Pick</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <h2 class="agdasima-bold">Get in Touch</h2>
+                <p>If you have any questions, feedback, or suggestions, please feel free to contact us using the form below.</p>
 
-        <!--------------------------------------------------------------------------------------------------------->
-        <!------------------------------------------ Featured Books Section --------------------------------------->
-        <!--------------------------------------------------------------------------------------------------------->
-        <section id="featured-books" class="content-section">
-            <div class="container">
-                <div class="featured-books-header">
-                    <h2>Recommended Books of the Month</h2>
-                </div>
-                <div class="content-grid">
-                    <div class="grid-item" data-href="must-reads.html">
-                        <img src="images/Grimms%20Complete%20Fairy%20Tales%202%20copy-300x300.png"
-                            alt="Cover of Book Title 1">
-                        <div class="grid-item-content">
-                            <h3>Book Title 1</h3>
-                            <div class="star-rating">
-                                <span style="width: 90%;"></span>
-                            </div>
-                            <p>Author Name</p>
-                            <p>Short description of the book.</p>
-                        </div>
+                <form class="contact-form" id="contact-form">
+               
+                    <div class="form-group">
+                        <label for="subject">Choose a Subject:</label>
+                        <select id="subject" name="subject" class="full-width">
+                            <option value="book-recommendation">Book Recommendation</option>
+                            <option value="club-membership">Club Membership</option>
+                            <option value="event-inquiry">Event Inquiry</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
                     </div>
-                    <div class="grid-item" data-href="must-reads.html">
-                        <img src="images/Grimms%20Complete%20Fairy%20Tales%202%20copy-300x300.png"
-                            alt="Cover of Book Title 2">
-                        <div class="grid-item-content">
-                            <h3>Book Title 2</h3>
-                            <div class="star-rating">
-                                <span style="width: 90%;"></span>
-                            </div>
-                            <p>Author Name</p>
-                            <p>Short description of the book.</p>
-                        </div>
-                    </div>
-                    <div class="grid-item" data-href="must-reads.html">
-                        <img src="images/Grimms%20Complete%20Fairy%20Tales%202%20copy-300x300.png"
-                            alt="Cover of Book Title 3">
-                        <div class="grid-item-content">
-                            <h3>Book Title 3</h3>
-                            <div class="star-rating">
-                                <span style="width: 90%;"></span>
-                            </div>
-                            <p>Author Name</p>
-                            <p>Short description of the book.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!--------------------------------------------------------------------------------------------------------->
-        <!------------------------------------------ Join Club Section -------------------------------------------->
-        <!--------------------------------------------------------------------------------------------------------->
-        <section id="join-club" class="content-section">
-            <div class="container">
-                <div class="two-column">
-                    <div>
-                        <h2 id="join-club-title">Join the Club</h2>
-                        <p>Connect with readers, join discussions, and find your next favorite book.</p>
-                        <a href="join-us.html" class="cta-button-1 mt-medium">▶︎▶︎ Join Now </a>
+                 
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" class="full-width" placeholder="Enter your email" required>
                     </div>
-                    <div>
-                        <img src="images/The%20Mayors%20Tongue%20by%20Nathaniel%20Rich%202%20copy-300x300.png"
-                            alt="Reader enjoying a book">
+
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" class="full-width" placeholder="Enter your name" required>
                     </div>
-                </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" class="full-width" rows="5" placeholder="Enter your message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="cta-button-1">Submit</button>
+                </form>
             </div>
         </section>
+    </main>
 
         <!--------------------------------------------------------------------------------------------------------->
         <!------------------------------------------ Newsletter Section ------------------------------------------->

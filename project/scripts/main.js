@@ -13,16 +13,19 @@ document.addEventListener('DOMContentLoaded', function() {
     //=====================================NAVIGATION================================
     document.querySelector('a[href="#home"]').setAttribute('href', 'home.html');
     document.querySelector('a[href="#monthly-pick"]').setAttribute('href', "monthly-pick.html");
-    document.querySelector('a[href="#our-picks"]').setAttribute('href', "our-picks.html");
+    document.querySelector('a[href="#our-picks"]').setAttribute('href', "must-reads.html");
     document.querySelector('a[href="#about"]').setAttribute('href', "about-us.html");
     document.querySelector('a[href="#get-involved"]').setAttribute('href', "get-involved.html");
-    document.querySelector('a[href="#contact"]').setAttribute('href', "contact-us.html");
+    document.querySelector('a[href="#contact"]').setAttribute('href', "about-us.html");
+
+
+
 
     //=============================GRID_ITEM_NAVIGATION=============================
     // Add click event listeners to grid items for navigation
-    const gridItems = document.querySelectorAll('.grid-item');
+    const gridItems = document.querySelectorAll(".grid-item");
     gridItems.forEach(item => {
-        item.addEventListener('click', function() {
+        item.addEventListener("click", function() {
             const pageUrl = this.getAttribute("data-href");
             if (pageUrl) {
                 window.location.href = pageUrl;

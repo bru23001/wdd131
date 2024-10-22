@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about Your Book Club, its mission, and the team that makes it all happen.">
+    <meta name="author" content="Your Book Club">
+
+    <title>About Us - Your Book Club</title>
+
+  
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <button id="menu" class="hamburger">☰</button>
+
+        <div class="container flex-container">
+            <nav>
+
+                <ul class="reboto-slab-nav">
+                    <li><a href="siteplan.html">Home</a></li>
+                    <li><a href="monthly-pick.html">Monthly Pick</a></li>
+                    <li><a href="must-reads.html">Our Picks</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="join-us.html">Get Involved</a></li>
+                    <li><a href="join-us.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div>
+                <button class="cta-button-1" onclick="window.location.href='join-us.html';">▶︎▶︎ Join Now </a>
+                    <a href="login.html" class="cta-button-2">Log in ▶︎</a>
+            </div>
+        </div>
+        </div>
+    </header>
+
+
+    <main>
+   
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>About Us</h1>
+                    <p>Connecting Readers, Inspiring Minds.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="content-section">
+            <div class="container text-center">
+                <h2>Our Mission</h2>
+                <p>Your Book Club is dedicated to creating a welcoming and inclusive space for book lovers to come together, share stories, and inspire each other. Our mission is to build a community that celebrates the power of reading.</p>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="content-section">
+            <div class="container">
+                <h2>Meet Our Team</h2>
+                <div class="content-grid">
+                    <!-- Team Member 1 -->
+                    <div class="grid-item">
+                        <img src="images/team-member-1.jpg" alt="Team Member 1">
+                        <div class="grid-item-content">
+                            <h3>John Doe</h3>
+                            <p>Founder & CEO</p>
+                            <p>John is passionate about creating spaces where readers can share their love for books. His favorite genres include historical fiction and biographies.</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="grid-item">
+                        <img src="images/team-member-2.jpg" alt="Team Member 2">
+                        <div class="grid-item-content">
+                            <h3>Jane Smith</h3>
+                            <p>Editor-in-Chief</p>
+                            <p>Jane leads the editorial team, ensuring that all content on Your Book Club meets the highest standards. Her favorite genre is science fiction.</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="grid-item">
+                        <img src="images/team-member-3.jpg" alt="Team Member 3">
+                        <div class="grid-item-content">
+                            <h3>Robert Brown</h3>
+                            <p>Community Manager</p>
+                            <p>Robert is the friendly face of our book club, ensuring that our community members feel welcome and valued. He loves fantasy novels.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="content-section">
+            <div class="container">
+                <h2>Our Values</h2>
+                <div class="two-column">
+                    <div>
+                        <h3>Inclusion</h3>
+                        <p>We believe in creating an inclusive space where everyone is welcome, regardless of background or experience.</p>
+                    </div>
+                    <div>
+                        <h3>Passion</h3>
+                        <p>We are passionate about reading and believe in its power to transform minds and hearts.</p>
+                    </div>
+                    <div>
+                        <h3>Community</h3>
+                        <p>We strive to build a community where readers can connect, share, and inspire one another through the joy of books.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--------------------------------------------------------------------------------------------------------->
+        <!------------------------------------------ Newsletter Section ------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------------->
+        <section class="newsletter-section">
+            <div class="container text-center">
+                <h3 id="newsletter-title">Join the Newsletter</h3>
+                <p>Dive into the latest from Your Book Club</p>
+                <form id="newsletter-form">
+                    <div class="input-container">
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                        <button type="submit" class="cta-button-1">▶︎▶︎ Subscribe</button>
+                    </div>
+                    <span class="error-message"></span>
+                </form>
+            </div>
+        </section>
+    
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>©2024 Your Book Club. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/tiktok.png" alt="TikTok"></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

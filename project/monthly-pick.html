@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The LDS premier destination for literary exploration and community">
+    <meta name="author" content="Victor J. Brun">
+
+    <title>Your Book Club - Connecting Readers, Inspiring Minds</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/carousel.js" defer></script>
+    <script src="scripts/form-validation.js" defer></script>
+    <script src="scripts/book-filter.js" defer></script>
+    <script src="scripts/local-storage.js" defer></script>
+    <script src="scripts/quiz.js" defer></script>
+    <script src="scripts/lazy-load.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <button id="menu" class="hamburger">☰</button>
+
+        <div class="container flex-container">
+            <nav>
+
+                <ul>
+                    <li><a href="siteplan.html">Home</a></li>
+                    <li><a href="monthly-pick.html"class="active">Monthly Pick</a></li>
+                    <li><a href="must-reads.html">Our Picks</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="join-us.html">Get Involved</a></li>
+                    <li><a href="join-us.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div>
+                <button class="cta-button-1" onclick="window.location.href='join-us.html';">▶︎▶︎ Join Now </a>
+                    <a href="login.html" class="cta-button-2">Log in ▶︎</a>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Book of the Month Section -->
+        <section class="content-section">
+            <div class="container two-column">
+             
+                <div class="book-showcase">
+                    <img src="images/book-of-the-month.jpg" alt="Cover of Book Title">
+                </div>
+
+            
+                <div class="book-details">
+                    <h1 class="agdasima-bold">Society of Lies</h1>
+                    <h3 class="agdasima-regular">by John Doe</h3>
+                    <p class="roboto-slab-heading">
+                        This dark academia thriller unravels the secrets of an elite society, where nothing is as it seems. Follow the protagonist as they dive deep into the shadows of power, privilege, and deception, revealing truths that could upend their world forever.
+                    </p>
+
+                    <div class="star-rating">
+                        <span style="width: 90%;"></span> 
+                    </div>
+
+                    <a href="#" class="cta-button-1">Purchase Book</a>
+                </div>
+            </div>
+        </section>
+        <!--------------------------------------------------------------------------------------------------------->
+        <!------------------------------------------ Newsletter Section ------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------------->
+        <section class="newsletter-section">
+            <div class="container text-center">
+                <h3 id="newsletter-title">Join the Newsletter</h3>
+                <p>Dive into the latest from Your Book Club</p>
+                <form id="newsletter-form">
+                    <div class="input-container">
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                        <button type="submit" class="cta-button-1">▶︎▶︎ Subscribe</button>
+                    </div>
+                    <span class="error-message"></span>
+                </form>
+            </div>
+        </section>
+    </main>
+    </main>
+
+
+    <!--------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------ Footer Section ----------------------------------------------->
+    <!--------------------------------------------------------------------------------------------------------->
+    <footer>
+        <div class="container">
+            <p>©<span id="current-year"></span> Your Book Club. All Rights Reserved.</p>
+            <p>Last Modification: <span id="last-modified"></span></p>
+            <div class="social-icons mt-medium">
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/tiktok.png" alt="TikTok"></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>
