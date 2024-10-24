@@ -5,53 +5,94 @@
 .newsletter-section {
     background-color: var(--primary-color);
     color: var(--light-text-color);
-    text-align: center;
     padding: var(--spacing-large) 0;
-}
-  
-.newsletter-section form {
+    text-align: center;
     display: flex;
-    gap: var(--spacing-small);
-    justify-content: center;
-    margin-top: var(--spacing-medium);
     flex-direction: column;
     align-items: center;
 }
+.newsletter-section .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.newsletter-section h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    margin-top: var(--spacing-medium);
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0;
+    background: none;
+    
+}
   
 .newsletter-section input[type="email"] {
-    padding: var(--spacing-small) var(--spacing-medium);
     width: 300px;
+    height: 44px;
+    padding: 0 var(--spacing-medium);
+    margin: 0;
+    border: none;
     border-radius: var(--border-radius) 0 0 var(--border-radius);
-    border: none;
     outline: none;
+    font-size: var(--base-font-size);
+    flex: none;    
 }
   
-.newsletter-section button {
-    background-color: var(--secondary-color);
-    color: var(--light-text-color);
+.newsletter-section .cta-button-1 {
+
+    height: 44px;
+    padding: 0 var(--spacing-medium);
+    margin: 0;
     border: none;
-    padding: var(--spacing-small) var(--spacing-medium);
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    background-color: var(--accent-color-1);
+    color: var(--light-text-color);
     cursor: pointer;
-    transition: background-color var(--transition-speed) ease;
+    font-size: var(--base-font-size);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    flex: none;
+   
 }
   
-.newsletter-section button:hover {
-    background-color: var(--accent-color-1);
+.newsletter-section .cta-button-1:hover {
+    background-color: var(--accent-color-1-darker);
 }
 
 .error-message {
+  
     display: block;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 19px;
-    margin-top: 10px;
+    color: var(accent-color-1);
+    margin-top: var(--spacing-small);
+    font-size: 0.9em;
     text-align: center;
+    
 }
 
-.newsletter-section form .input-container {
+.newsletter-section .input-container {
+
     display: flex;
-    gap: var(--spacing-small);
-    justify-content: center;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
 }
+.newsletter-section input[type="email"],
+.newsletter-section .cta-button-1 {
+    box-sizing: border-box;
+    line-height: 44px;
+}
+
