@@ -60,4 +60,44 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // Default location
+    const defaultLocation = { lat: 40.7128, lng: -74.0060 };
+            
+    // Create map
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: defaultLocation,
+        mapTypeControl: false,
+        streetViewControl: false,
+        fullscreenControl: false
+    });
+
+    // Markers for book clubs
+    const bookClubs = [
+        {
+            position: { lat: 40.7128, lng: -74.0060 },
+            title: "Downtown Readers"
+        },
+        {
+            position: { lat: 40.7158, lng: -74.0090 },
+            title: "Mystery Lovers Book Club"
+        }
+    ];
+
+    bookClubs.forEach(club => {
+        new google.maps.Marker({
+            position: club.position,
+            map: map,
+            title: club.title
+        });
+    });
+
+     // Handle errors
+     window.initMap = initMap;
+     window.gm_authFailure = function() {
+         document.getElementById('map').innerHTML = 
+             'Error loading Google Maps. Please check your API key.';
+     };
+
 });

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn more about Your Book Club, its mission, and the team that makes it all happen.">
+    <meta name="author" content="Your Book Club">
+
+    <title>About Us - Your Book Club</title>
+
+
+    <link rel="stylesheet" href="styles/content-sections.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/newsletter.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/form.css">
+
+<!--     <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtSLVfXMUplrIYFD4UDe9PwONvj5XechE&callback=initMap">
+        </script>
+ -->    
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/carousel.js" defer></script>
+    <script src="scripts/form-validation.js" defer></script>
+    <script src="scripts/book-filter.js" defer></script>
+    <script src="scripts/local-storage.js" defer></script>
+    <script src="scripts/quiz.js" defer></script>
+    <script src="scripts/lazy-load.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <button id="menu" class="hamburger">☰</button>
+
+        <div class="container flex-container">
+            <nav>
+
+                <ul>
+                    <li><a href="siteplan.html">Home</a></li>
+                    <li><a href="monthly-pick.html">Monthly Pick</a></li>
+                    <li><a href="must-reads.html">Our Picks</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="get-involved.html" class="active">Get Involved</a></li>
+                    <li><a href="join-us.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div>
+                <button class="cta-button-1" onclick="window.location.href='join-us.html';">▶︎▶︎ Join Now </a>
+                    <a href="login.html" class="cta-button-2">Log in ▶︎</a>
+            </div>
+        </div>
+
+    </header>
+    <main>
+
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="logo-container">
+                        <div class="logo">
+                            <img src="images/bookclub.png" alt="Your Book Club Logo">
+                        </div>
+                    </div>
+                    <div class="tagline">
+                        <h1>Connecting Readers,<br>Inspiring Minds</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="find-club" class="section content-section">
+            <div class="container">
+                <div class="search-header">
+                    <h2>Book Clubs Near You</h2>
+                </div>
+
+                <div class="search-content two-column">
+                    <div class="search-filters">
+                        <div class="form-group">
+                            <input type="text" id="location" placeholder="Enter your location" class="input-field">
+                            <select id="distance" class="input-field">
+                                <option value="5">Within 5 miles</option>
+                                <option value="10">Within 10 miles</option>
+                                <option value="25">Within 25 miles</option>
+                                <option value="50">Within 50 miles</option>
+                            </select>
+                            <select id="genre" class="input-field">
+                                <option value="">All Genres</option>
+                                <option value="fiction">Fiction</option>
+                                <option value="mystery">Mystery</option>
+                                <option value="scifi">Science Fiction</option>
+                                <option value="nonfiction">Non-Fiction</option>
+                            </select>
+                            <button type="submit" class="cta-button-1">Find Book Clubs</button>
+                        </div>
+
+                        <div class="club-list">
+                            <div class="club-card">
+                                <h3>Downtown Readers</h3>
+                                <p>📍 Central Library, Main St</p>
+                                <p>📚 Currently Reading: "Society of Lies"</p>
+                                <p>🕒 Meets every Tuesday at 6 PM</p>
+                                <button class="cta-button-2">Join Group</button>
+                            </div>
+
+                            <div class="club-card">
+                                <h3>Mystery Lovers Book Club</h3>
+                                <p>📍 Cozy Corner Café, Oak Ave</p>
+                                <p>📚 Focus: Mystery & Thriller</p>
+                                <p>🕒 Meets monthly - First Saturday</p>
+                                <button class="cta-button-2">Join Group</button>
+                            </div>
+                        </div>
+                    </div>
+
+                   <!--  <div class="map-container">
+                        <div id="map" style="width: 100%; height: 600px;"></div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <!--------------------------------------------------------------------------------------------------------->
+        <!------------------------------------------ Newsletter Section ------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------------->
+        <section class="newsletter-section">
+            <div class="container text-center">
+                <h3 id="newsletter-title">Join the Newsletter</h3>
+                <p>Dive into the latest from Your Book Club</p>
+                <form id="newsletter-form">
+                    <div class="input-container">
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                        <button type="submit" class="cta-button-1">▶︎▶︎ Subscribe</button>
+                    </div>
+                    <span class="error-message"></span>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>©2024 Your Book Club. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/tiktok.png" alt="TikTok"></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
