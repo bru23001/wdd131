@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Must Reads - Your Book Club</title>
-    <link rel="stylesheet" href="styles/content-sections.css">
+    <title>Login - Your Book Club</title>
+    <<link rel="stylesheet" href="styles/content-sections.css">
     <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/typography.css">
     <link rel="stylesheet" href="styles/responsive.css">
@@ -40,9 +40,9 @@
             <nav>
 
                 <ul>
-                    <li><a href="siteplan.html">Home</a></li>
+                    <li><a href="siteplan.html" class=>Home</a></li>
                     <li><a href="monthly-pick.html">Monthly Pick</a></li>
-                    <li><a href="must-reads.html"class="active">Our Picks</a></li>
+                    <li><a href="must-reads.html">Our Picks</a></li>
                     <li><a href="about-us.html">About Us</a></li>
                     <li><a href="join-us.html">Get Involved</a></li>
                     <li><a href="join-us.html">Contact</a></li>
@@ -53,7 +53,7 @@
                     <a href="login.html" class="cta-button-2">Log in ▶︎</a>
             </div>
         </div>
-        
+        </div>
     </header>
 
     <main>
@@ -72,69 +72,52 @@
             </div>
         </section>
 
-        <section id="featured-books" class="section content-section">
+        <section class="section content-section">
             <div class="container">
-                <div class="featured-books-header">
-                    <h2>Staff Picks</h2>
-                </div>
-
-                <div class="content-grid">
-                    <div class="grid-item" data-href="must-reads.html">
-                        <img src="images/book1.jpg" alt="Cover of The Silent Echo">
-                        <div class="grid-item-content">
-                            <h3>The Silent Echo</h3>
-                            <div class="star-rating">
-                                <span style="width: 95%;"></span>
-                            </div>
-                            <p class="author">Sarah Mitchell</p>
-                            <p>A haunting mystery that follows a detective's journey through abandoned subway tunnels in search of a missing child. Each step deeper reveals more about the city's dark past.</p>
+                <div class="form-container text-center">
+                    <form class="login-form">
+                        <h3>Log In to Your Account</h3>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" class="input-field" required>
                         </div>
-                    </div>
 
-                    <div class="grid-item" data-href="must-reads.html">
-                        <img src="images/book2.jpg" alt="Cover of Garden of Dreams">
-                        <div class="grid-item-content">
-                            <h3>Garden of Dreams</h3>
-                            <div class="star-rating">
-                                <span style="width: 88%;"></span>
-                            </div>
-                            <p class="author">Michael Chang</p>
-                            <p>A magical realism tale set in a mysterious garden where dreams become reality. But as the protagonist discovers, not all dreams should come true.</p>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" class="input-field" required>
                         </div>
-                    </div>
 
-                    <div class="grid-item" data-href="must-reads.html">
-                        <img src="images/book3.jpg" alt="Cover of The Last Algorithm">
-                        <div class="grid-item-content">
-                            <h3>The Last Algorithm</h3>
-                            <div class="star-rating">
-                                <span style="width: 92%;"></span>
-                            </div>
-                            <p class="author">Elena Rodriguez</p>
-                            <p>A science fiction thriller about artificial intelligence that questions what it means to be human in a world increasingly controlled by machines.</p>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox"> Remember me
+                            </label>
                         </div>
-                    </div>
+
+                        <button type="submit" class="cta-button-1">Log In</button>
+
+                        <div class="form-links">
+                            <a href="#" class="text-link">Forgot Password?</a>
+                            <a href="#" class="text-link">Create New Account</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
 
-         <!--------------------------------------------------------------------------------------------------------->
-        <!------------------------------------------ Newsletter Section ------------------------------------------->
-        <!--------------------------------------------------------------------------------------------------------->
         <section class="newsletter-section">
             <div class="container text-center">
-                <h3 id="newsletter-title">Join the Newsletter</h3>
+                <h3>Join the Newsletter</h3>
                 <p>Dive into the latest from Your Book Club</p>
-                <form id="newsletter-form">
-                    <div class="input-container">
-                        <input type="email" id="email" placeholder="Enter your email" required>
-                        <button type="submit" class="cta-button-1">▶︎▶︎ Subscribe</button>
-                    </div>
-                    <span class="error-message"></span>
-                </form>
+                <div class="input-container">
+                    <form id="newsletter-form">
+                        <input type="email" id="newsletter-email" placeholder="Enter your email">
+                        <button type="submit">▶︎▶︎ Subscribe</button>
+                    </form>
+                </div>
+                <span class="error-message"></span>
             </div>
         </section>
-
     </main>
 
     <footer>

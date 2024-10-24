@@ -9,8 +9,19 @@
 
     <title>Your Book Club - Connecting Readers, Inspiring Minds</title>
 
-    <link rel="stylesheet" href="styles/main.css">
-    
+    <link rel="stylesheet" href="styles/content-sections.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/newsletter.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/form.css">
+
     <script src="scripts/main.js" defer></script>
     <script src="scripts/carousel.js" defer></script>
     <script src="scripts/form-validation.js" defer></script>
@@ -35,12 +46,12 @@
             <nav>
 
                 <ul>
-                    <li><a href="siteplan.html" class="active">Home</a></li>
+                    <li><a href="siteplan.html">Home</a></li>
                     <li><a href="monthly-pick.html">Monthly Pick</a></li>
                     <li><a href="must-reads.html">Our Picks</a></li>
                     <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="join-us.html">Get Involved</a></li>
-                    <li><a href="join-us.html"class="active">Contact</a></li>
+                    <li><a href="join-us.html"class="active">Get Involved</a></li>
+                    <li><a href="join-us.html">Contact</a></li>
                 </ul>
             </nav>
             <div>
@@ -48,7 +59,7 @@
                     <a href="login.html" class="cta-button-2">Log in ▶︎</a>
             </div>
         </div>
-        </div>
+        
     </header>
 
     <main>
@@ -69,9 +80,10 @@
                 </div>
             </div>
         </section>
-        <!-- Contact Form Section -->
-        <section class="content-section">
-            <div class="container">
+
+        <form action="message.html" method="get">
+        
+            <div class="container-form">
                 <h2 class="agdasima-bold">Get in Touch</h2>
                 <p>If you have any questions, feedback, or suggestions, please feel free to contact us using the form below.</p>
 
@@ -79,7 +91,7 @@
                
                     <div class="form-group">
                         <label for="subject">Choose a Subject:</label>
-                        <select id="subject" name="subject" class="full-width">
+                        <select id="subject" name="subject" required>
                             <option value="book-recommendation">Book Recommendation</option>
                             <option value="club-membership">Club Membership</option>
                             <option value="event-inquiry">Event Inquiry</option>
@@ -90,18 +102,15 @@
 
                  
                     <div class="form-group">
-                        <label for="email">Your Email:</label>
-                        <input type="email" id="email" name="email" class="full-width" placeholder="Enter your email" required>
+                        <input type="email" id="email" name="email"  placeholder="Enter your email" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="name">Your Name:</label>
-                        <input type="text" id="name" name="name" class="full-width" placeholder="Enter your name" required>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Your Message:</label>
-                        <textarea id="message" name="message" class="full-width" rows="5" placeholder="Enter your message" required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
                     </div>
 
                     <button type="submit" class="cta-button-1">Submit</button>
@@ -109,6 +118,8 @@
             </div>
         </section>
     </main>
+
+    
 
         <!--------------------------------------------------------------------------------------------------------->
         <!------------------------------------------ Newsletter Section ------------------------------------------->

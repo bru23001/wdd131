@@ -1,0 +1,68 @@
+form {
+    margin: var(--spacing-medium) auto;
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-medium);
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    max-width: 500px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: var(--spacing-small);
+    color: var(--text-color);
+    font-size: var(--base-font-size);
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="text"],
+textarea,
+select {
+  border-radius: var(--border-radius);
+  font-size: var(--base-font-size);
+  margin-top: var(--spacing-small);
+  margin-bottom: var(--spacing-medium);
+  padding: var(--spacing-small);
+  border: 1px solid var(--border-color);
+  width: 100%;
+  background-color: white; 
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 1px solid var(--secondary-color); 
+}
+
+
+textarea {
+  height: 150px; 
+}
+
+button[type="submit"] {
+  background-color: var(--accent-color-1);
+  color: var(--light-text-color);
+  cursor: pointer;
+  padding: var(--spacing-small);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  font-size: var(--button-font-size);
+  width: 100%;
+}
+
+
+button[type="submit"]:hover {
+  background-color: var(--accent-color-1-darker);
+} 
+
+
+
+@media (min-width: 600px) {
+  form {
+      max-width: 600px;
+  }
+}

@@ -10,19 +10,33 @@
     <title>About Us - Your Book Club</title>
 
   
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles/content-sections.css">
     <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/typography.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/components.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/newsletter.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/form.css">
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/carousel.js" defer></script>
+    <script src="scripts/form-validation.js" defer></script>
+    <script src="scripts/book-filter.js" defer></script>
+    <script src="scripts/local-storage.js" defer></script>
+    <script src="scripts/quiz.js" defer></script>
+    <script src="scripts/lazy-load.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Roboto+Slab:wght@100..900&display=swap"
         rel="stylesheet">
+
 </head>
 
 <body>
@@ -33,13 +47,13 @@
         <div class="container flex-container">
             <nav>
 
-                <ul class="reboto-slab-nav">
+                <ul>
                     <li><a href="siteplan.html">Home</a></li>
                     <li><a href="monthly-pick.html">Monthly Pick</a></li>
                     <li><a href="must-reads.html">Our Picks</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="about-us.html"class="active">About Us</a></li>
                     <li><a href="join-us.html">Get Involved</a></li>
-                    <li><a href="join-us.html" class="active">Contact</a></li>
+                    <li><a href="join-us.html">Contact</a></li>
                 </ul>
             </nav>
             <div>
@@ -47,7 +61,7 @@
                     <a href="login.html" class="cta-button-2">Log in ▶︎</a>
             </div>
         </div>
-        </div>
+        
     </header>
 
 
@@ -56,18 +70,25 @@
         <section class="hero-section">
             <div class="container">
                 <div class="hero-content">
-                    <h1>About Us</h1>
-                    <p>Connecting Readers, Inspiring Minds.</p>
+                    <div class="logo-container">
+                        <div class="logo">
+                            <img src="images/bookclub.png" alt="Your Book Club Logo">
+                        </div>
+                    </div>
+                    <div class="tagline">
+                        <h1>Connecting Readers,<br>Inspiring Minds</h1>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Mission Section -->
         <section class="content-section">
-            <div class="container text-center">
+            <div class="monthly-pick-header">
                 <h2>Our Mission</h2>
-                <p>Your Book Club is dedicated to creating a welcoming and inclusive space for book lovers to come together, share stories, and inspire each other. Our mission is to build a community that celebrates the power of reading.</p>
             </div>
+                <p>Your Book Club is dedicated to creating a welcoming and inclusive space for book lovers to come together, share stories, and inspire each other. Our mission is to build a community that celebrates the power of reading.</p>
+            
         </section>
 
         <!-- Team Section -->
