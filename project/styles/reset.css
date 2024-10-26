@@ -3,17 +3,16 @@
 ====================================RESET=============================================
 ====================================================================================*/
 
-/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--body-font-family);
     font-size: var(--base-font-size);
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
-    margin: 0;
-    padding: 0;
-}
-  
-* {
-    box-sizing: border-box;
 }

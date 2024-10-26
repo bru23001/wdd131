@@ -3,101 +3,152 @@
 ====================================================================================*/
 
 /** 
- * This script handles various functionalities for the Your Book Club website,
- * including navigation, smooth scrolling, and dynamic content updates.
+ * This script handles all core functionality for the Your Book Club website
+ * including navigation, form validation, lazy loading, and local storage.
  */
 
+document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('menu');
+    const flexContainer = document.querySelector('.flex-container');
+    
+    menuButton.addEventListener('click', () => {
+        flexContainer.classList.toggle('open');
+        menuButton.textContent = flexContainer.classList.contains('open') ? '✕' : '☰';
+    });
 
-document.addEventListener('DOMContentLoaded', function() {
+    // Close menu when clicking outside
+    document.addEventListener('click', (event) => {
+        if (!flexContainer.contains(event.target)) {
+            flexContainer.classList.remove('open');
+            menuButton.textContent = '☰';
+        }
+    });
+});
 
-    //=====================================NAVIGATION================================
-    document.querySelector('a[href="#home"]').setAttribute('href', 'home.html');
-    document.querySelector('a[href="#monthly-pick"]').setAttribute('href', "monthly-pick.html");
-    document.querySelector('a[href="#our-picks"]').setAttribute('href', "must-reads.html");
-    document.querySelector('a[href="#about"]').setAttribute('href', "about-us.html");
-    document.querySelector('a[href="#get-involved"]').setAttribute('href', "get-involved.html");
-    document.querySelector('a[href="#contact"]').setAttribute('href', "about-us.html");
+    //=============================FORM_HANDLING================================
+    const form = document.getElementById('newsletter-form');
+    const emailInput = document.getElementById('email');
+    const submitButton = form.querySelector('button');
+    const errorMessage = form.querySelector('.error-message');
 
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
 
+    function showError(message) {
+        errorMessage.textContent = message;
+        emailInput.classList.add('error');
+    }
 
+    function hideError() {
+        errorMessage.textContent = '';
+        emailInput.classList.remove('error');
+    }
 
-    //=============================GRID_ITEM_NAVIGATION=============================
-    // Add click event listeners to grid items for navigation
-    const gridItems = document.querySelectorAll(".grid-item");
-    gridItems.forEach(item => {
-        item.addEventListener("click", function() {
-            const pageUrl = this.getAttribute("data-href");
-            if (pageUrl) {
-                window.location.href = pageUrl;
+    // Form submission
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = emailInput.value.trim();
+
+        hideError();
+
+        if (!email) {
+            showError('Please enter your email address');
+            return;
+        }
+
+        if (!isValidEmail(email)) {
+            showError('Please enter a valid email address');
+            return;
+        }
+
+        submitButton.classList.add('loading');
+        submitButton.disabled = true;
+
+        try {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            emailInput.value = '';
+            alert('Thank you for subscribing!');
+        } catch (error) {
+            showError('Something went wrong. Please try again.');
+        } finally {
+            submitButton.classList.remove('loading');
+            submitButton.disabled = false;
+        }
+    });
+
+    // Real-time validation
+    emailInput.addEventListener('input', () => {
+        if (emailInput.value.trim()) {
+            hideError();
+        }
+    });
+
+    //=============================LAZY_LOADING================================
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        observer.unobserve(img);
+                    }
+                }
+            });
+        });
+
+        lazyImages.forEach(img => imageObserver.observe(img));
+    }
+
+    //=============================LOCAL_STORAGE================================
+    const favoriteBooks = JSON.parse(localStorage.getItem('favoriteBooks')) || [];
+
+    function addFavorite(bookId) {
+        if (!favoriteBooks.includes(bookId)) {
+            favoriteBooks.push(bookId);
+            localStorage.setItem('favoriteBooks', JSON.stringify(favoriteBooks));
+            updateFavoriteButtons();
+        }
+    }
+
+    function removeFavorite(bookId) {
+        const index = favoriteBooks.indexOf(bookId);
+        if (index > -1) {
+            favoriteBooks.splice(index, 1);
+            localStorage.setItem('favoriteBooks', JSON.stringify(favoriteBooks));
+            updateFavoriteButtons();
+        }
+    }
+
+    function updateFavoriteButtons() {
+        document.querySelectorAll('.book-card').forEach(card => {
+            const bookId = card.dataset.id;
+            const isFavorite = favoriteBooks.includes(bookId);
+            // Update favorite button states
+            const button = card.querySelector('.favorite-button');
+            if (button) {
+                button.textContent = isFavorite ? '★' : '☆';
+            }
+        });
+    }
+
+    // Add click handlers for favorite buttons
+    document.querySelectorAll('.favorite-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const bookId = button.closest('.book-card').dataset.id;
+            if (favoriteBooks.includes(bookId)) {
+                removeFavorite(bookId);
             } else {
-                console.log("No URL specified for this item.");
+                addFavorite(bookId);
             }
         });
     });
 
-    //=============================UPDATE_FOOTER====================================
-    // Update footer with current year and last modified date
+    //=============================FOOTER_UPDATES===============================
+    // Update copyright year and last modified date
     document.getElementById("current-year").textContent = new Date().getFullYear();
     document.getElementById("last-modified").textContent = document.lastModified;
-
-    //=============================HAMBURGER_MENU===================================
-    // Handle hamburger menu functionality
-    const hamButton = document.querySelector("#menu");
-    const navigation = document.querySelector("nav"); 
-
-    hamButton.addEventListener("click", function() {
-        navigation.classList.toggle("open"); 
-        hamButton.textContent = navigation.classList.contains("open") ? "✖" : "≡"; 
-    });
-
-     //=============================SMOOTH_SCROLL====================================
-    // Implement smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
-                behavior: "smoot"
-            });
-        });
-    });
-
-    // Default location
-    const defaultLocation = { lat: 40.7128, lng: -74.0060 };
-            
-    // Create map
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 12,
-        center: defaultLocation,
-        mapTypeControl: false,
-        streetViewControl: false,
-        fullscreenControl: false
-    });
-
-    // Markers for book clubs
-    const bookClubs = [
-        {
-            position: { lat: 40.7128, lng: -74.0060 },
-            title: "Downtown Readers"
-        },
-        {
-            position: { lat: 40.7158, lng: -74.0090 },
-            title: "Mystery Lovers Book Club"
-        }
-    ];
-
-    bookClubs.forEach(club => {
-        new google.maps.Marker({
-            position: club.position,
-            map: map,
-            title: club.title
-        });
-    });
-
-     // Handle errors
-     window.initMap = initMap;
-     window.gm_authFailure = function() {
-         document.getElementById('map').innerHTML = 
-             'Error loading Google Maps. Please check your API key.';
-     };
-
-});

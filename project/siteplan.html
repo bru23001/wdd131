@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The LDS premier destination for literary exploration and community">
-    <meta name="author" content="Victor J. Brun">
-
-    <title>Your Book Club - Connecting Readers, Inspiring Minds</title>
-
+    <meta name="description" content="Your Book Club - Connecting Readers, Inspiring Minds">
+    
+    
     <link rel="stylesheet" href="styles/content-sections.css">
     <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/typography.css">
@@ -35,147 +32,137 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Roboto+Slab:wght@100..900&display=swap"
         rel="stylesheet">
-
+    
+    <title>Your Book Club</title>
 </head>
-
 <body>
+    <!--====================================================================================
+    ====================================HEADER=============================================
+    ====================================================================================-->
     <header>
-        <button id="menu" class="hamburger">☰</button>
-
+        
         <div class="container flex-container">
+  
             <nav>
-
+                <div class="logo-container">
+                            <img src="images/bookclub.png" alt="Your Book Club Logo">
+                </div>
+                
                 <ul>
                     <li><a href="siteplan.html" class="active">Home</a></li>
-                    <li><a href="monthly-pick.html">Monthly Pick</a></li>
-                    <li><a href="must-reads.html">Our Picks</a></li>
                     <li><a href="about-us.html">About Us</a></li>
                     <li><a href="get-involved.html">Get Involved</a></li>
                     <li><a href="join-us.html">Contact</a></li>
+
+                    <div class="nav-buttons">
+                    <a href="join-us.html" class="cta-button-1">Join Now</a>
+                    <a href="login.html" class="cta-button-2">Log in</a>
+                </div>
+                <button id="menu" class="menu-button">☰</button>
+
                 </ul>
-            </nav>
-            <div>
-                <button class="cta-button-1" onclick="window.location.href='join-us.html';">▶︎▶︎ Join Now </a>
-                    <a href="login.html" class="cta-button-2">Log in ▶︎</a>
-            </div>
-        </div>
-        </div>
+            </nav> 
     </header>
 
+    <!--====================================================================================
+    ====================================MAIN CONTENT=========================================
+    ====================================================================================-->
     <main>
-        <!--------------------------------------------------------------------------------------------------------->
-        <!------------------------------------------ Hero Section ------------------------------------------------->
-        <!--------------------------------------------------------------------------------------------------------->
-        <section class="hero-section">
+        <!-- Hero Section -->
+        <section class="section hero-section">
             <div class="container">
-                <div class="hero-content">
-                    <div class="logo-container">
-                        <div class="logo">
-                            <img src="images/bookclub.png" alt="Your Book Club Logo">
-                        </div>
-                    </div>
-                    <div class="tagline">
-                        <h1>Connecting Readers,<br>Inspiring Minds</h1>
-                    </div>
+                
+                <div class="tagline">
+                    <h1>Connecting Readers, Inspiring Minds</h1>
                 </div>
+                
             </div>
         </section>
-        <!--------------------------------------------------------------------------------------------------------->
-        <!------------------------------------------ Monthly Pick Section ----------------------------------------->
-        <!--------------------------------------------------------------------------------------------------------->
-        <section id="monthly-pick" class="content-section monthly-pick">
+
+        <!-- Monthly Pick Section -->
+        <section id="monthly-pick" class="section content-section monthly-pick">
             <div class="container">
                 <div class="monthly-pick-header">
                     <h2>Book of the Month</h2>
                 </div>
                 <div class="monthly-pick-content two-column">
                     <div class="book-showcase">
-                        <img src="images/Grimms%20Complete%20Fairy%20Tales%202%20copy-300x300.png"
-                            alt="Cover of Society of Lies">
+                        <img src="images/monthly-pick.jpg" 
+                             alt="Cover of Tell Me Everything">
                     </div>
-                    <div class="book-details">
-                        <h3>Society of Lies</h3>
+                    <div class="book-content">
+                        <h3>Tell Me Everything</h3>
                         <div class="star-rating">
-                            <span style="width: 90%;"></span>
+                            <span style="width: 83%;"></span>
                         </div>
-                        <p>A dark academia thriller uncovering the truth about a secret society.</p>
-                        <a href="monthly-pick.html" class="cta-button-1 mt-medium">Discover the Pick</a>
+                        <p class="author">Elizabeth Strouth</p>
+                        <p>From Pulitzer Prize–winning author Elizabeth Strout comes a “generous, compassionate novel” (San Francisco Chronicle) about new friendships, old loves, and the very human desire to leave a mark on the world.</p>
+                        <a href="monthly-pick2.html" class="cta-button-1 mt-medium">Discover the Pick</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!--------------------------------------------------------------------------------------------------------->
-        <!------------------------------------------ Featured Books Section --------------------------------------->
-        <!--------------------------------------------------------------------------------------------------------->
-        <section id="featured-books" class="content-section">
-            <div class="container">
-                <div class="featured-books-header">
-                    <h2>Recommended Books of the Month</h2>
-                </div>
-                <div class="content-grid">
-                    <div class="grid-item" data-href="must-reads.html">
-                        <img src="images/Grimms%20Complete%20Fairy%20Tales%202%20copy-300x300.png"
-                            alt="Cover of Book Title 1">
-                        <div class="grid-item-content">
-                            <h3>Book Title 1</h3>
-                            <div class="star-rating">
-                                <span style="width: 90%;"></span>
-                            </div>
-                            <p>Author Name</p>
-                            <p>Short description of the book.</p>
+       <div class="container">
+            <section class="content-grid">
+                <div class="book-card">
+                    <img src="images/book1.jpg" alt="The Waiting" loading="lazy">
+                    <div class="book-content">
+                        <h3>The Waiting</h3>
+                        <div class="star-rating">
+                            <span style="width: 75%;"></span>
                         </div>
-                    </div>
-                    <div class="grid-item" data-href="must-reads.html">
-                        <img src="images/Grimms%20Complete%20Fairy%20Tales%202%20copy-300x300.png"
-                            alt="Cover of Book Title 2">
-                        <div class="grid-item-content">
-                            <h3>Book Title 2</h3>
-                            <div class="star-rating">
-                                <span style="width: 90%;"></span>
-                            </div>
-                            <p>Author Name</p>
-                            <p>Short description of the book.</p>
-                        </div>
-                    </div>
-                    <div class="grid-item" data-href="must-reads.html">
-                        <img src="images/Grimms%20Complete%20Fairy%20Tales%202%20copy-300x300.png"
-                            alt="Cover of Book Title 3">
-                        <div class="grid-item-content">
-                            <h3>Book Title 3</h3>
-                            <div class="star-rating">
-                                <span style="width: 90%;"></span>
-                            </div>
-                            <p>Author Name</p>
-                            <p>Short description of the book.</p>
-                        </div>
+                        <p class="author">Michael Connelly</p>
+                        <p class="description">A case gone cold, two detectives on the hunt, and everyone with their own personal agenda. Terrifying twists and addictive action makes this another hit from Michael Connelly.</p>
+                        <a href="must-reads.html" class="cta-button-1">Learn More</a>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!--------------------------------------------------------------------------------------------------------->
-        <!------------------------------------------ Join Club Section -------------------------------------------->
-        <!--------------------------------------------------------------------------------------------------------->
-        <section id="join-club" class="content-section">
+            
+                <div class="book-card">
+                    <img src="images/book2.jpg" alt="Identity Unknown" loading="lazy">
+                    <div class="book-content">
+                        <h3>Identity Unknown</h3>
+                        <div class="star-rating">
+                            <span style="width: 67%;"></span>
+                        </div>
+                        <p class="author">Patricia Cornwell</p>
+                        <p class="description">Death reveals all — even the unexplainable phenomena deep in the woods. This is no ordinary murder mystery...</p>
+                        <a href="must-reads.html" class="cta-button-1">Learn More</a>
+                    </div>
+                </div>
+            
+                <div class="book-card">
+                    <img src="images/book3.jpg" alt="Intermezzo" loading="lazy">
+                    <div class="book-content">
+                        <h3>Intermezzo</h3>
+                        <div class="star-rating">
+                            <span style="width: 64%;"></span>
+                        </div>
+                        <p class="author">Sally Rooney</p>
+                        <p class="description">We all caught the Sally Rooney bug with her stunning debut Conversations with Friends — now we’re ready to fall in love all over again. Intermezzo absolutely soars with complicated relationships (romantic and familial) and the signature writing we can’t get enough of from a literary icon.</p>
+                        <a href="must-reads.html" class="cta-button-1">Learn More</a>
+                    </div>
+                </div>
+            </section>
+       </div>
+       
+        <section id="join-club" class="section content-section">
             <div class="container">
                 <div class="two-column">
-                    <div>
+                    <div class="monthly-pick-header">
                         <h2 id="join-club-title">Join the Club</h2>
                         <p>Connect with readers, join discussions, and find your next favorite book.</p>
-                        <a href="join-us.html" class="cta-button-1 mt-medium">▶︎▶︎ Join Now </a>
+                        <a href="join-us.html" class="cta-button-1 mt-medium">▶︎▶︎ Join Now</a>
                     </div>
                     <div>
-                        <img src="images/The%20Mayors%20Tongue%20by%20Nathaniel%20Rich%202%20copy-300x300.png"
-                            alt="Reader enjoying a book">
+                        <img src="images/The%20Mayors%20Tongue%20by%20Nathaniel%20Rich%202%20copy-300x300.png" 
+                             alt="Reader enjoying a book">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!--------------------------------------------------------------------------------------------------------->
-        <!------------------------------------------ Newsletter Section ------------------------------------------->
-        <!--------------------------------------------------------------------------------------------------------->
+        <!-- Newsletter Section -->
         <section class="newsletter-section">
             <div class="container text-center">
                 <h3 id="newsletter-title">Join the Newsletter</h3>
@@ -191,9 +178,9 @@
         </section>
     </main>
 
-    <!--------------------------------------------------------------------------------------------------------->
-    <!------------------------------------------ Footer Section ----------------------------------------------->
-    <!--------------------------------------------------------------------------------------------------------->
+    <!--====================================================================================
+    ====================================FOOTER=============================================
+    ====================================================================================-->
     <footer>
         <div class="container">
             <p>©<span id="current-year"></span> Your Book Club. All Rights Reserved.</p>
@@ -207,9 +194,7 @@
         </div>
     </footer>
 
-
-
-
+    <!-- Scripts -->
+   
 </body>
-
 </html>

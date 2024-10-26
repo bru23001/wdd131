@@ -5,49 +5,35 @@
 
 :root {
     /* Color Scheme */
-    --primary-color: #00A3FF;  /* Bright blue */
-    --secondary-color: #1E2B3A;  /* Dark blue */
-    --accent-color-1: #FF6B6B; /* Coral */
-    --accent-color-1-darker: #bc5151;  /* Dark Coral */
-    --accent-color-2: #0dca16;  /* Green */
-    --accent-color-2-darker: #08710e;  /* Dark Green */
+    --primary-color: #00A3FF;
+    --secondary-color: #1E2B3A;
+    --accent-color-1: #FF6B6B;
+    --accent-color-1-darker: #bc5151;
+    --accent-color-2: #0dca16;
+    --accent-color-2-darker: #08710e;
     --text-color: #333;
     --light-text-color: white;
-    --background-color: #f7f7f7;   /* Light gray */
-    --light-background-color: #cff5d2;  /* Light green */
+    --background-color: #f7f7f7;
+    --light-background-color: #cff5d2;
     --shadow-color: black;
-  
+
     /* Typography */
     --base-font-size: 20px;
-    --nav-font-size: 22px;
+    --nav-font-size: 18px;
     --heading-font-family: "Agdasima", sans-serif;
-    --body-font-family: "Roboto Slab", serif;          
-  
+    --body-font-family: "Roboto Slab", serif;
+
     /* Spacing */
     --spacing-small: 10px;
     --spacing-medium: 20px;
     --spacing-large: 40px;
-  
-    /* Border Radius */
-    --border-radius: 5px;
-  
-    /* Transitions */
-    --transition-speed: 0.3s;
-
-    /* Button Styles */
-    --button-padding: 10px 20px;
-    --button-font-size: 16px;
 
     /* Layout */
     --header-height: 80px;
     --footer-height: 200px;
     --max-width: 1200px;
-
-    /* Grid */
-    --grid-columns: 4;
-    --grid-gap: 20px;
-
-    /* Form Inputs */
-    --input-height: 40px;
-    --input-padding: 0 15px;
-}  
+    
+    /* Other */
+    --border-radius: 5px;
+    --transition-speed: 0.3s;
+}

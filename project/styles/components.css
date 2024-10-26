@@ -2,102 +2,130 @@
 ====================================COMPONENTS========================================
 ====================================================================================*/
 
-/* =============================Button Styles====================================== */
+.header {
+  background-color: var(--primary-color);
+  padding: var(--spacing-medium) 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* components/navigation.css */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-medium);
+}
+
+.nav__link {
+  color: var(--light-text-color);
+  text-decoration: none;
+  font-size: var(--nav-font-size);
+  transition: color var(--transition-speed) ease;
+}
+
+.nav__toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--light-text-color);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* components/book-card.css */
+.book-card {
+  background-color: var(--light-text-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: transform var(--transition-speed) ease;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.book-card__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.book-card__content {
+  padding: var(--spacing-medium);
+}
+
+/* components/buttons.css */
 .cta-button-1, .cta-button-2 {
   display: inline-block;
-  padding: var(--button-padding);
-  font-size: var(--button-font-size);
-  text-decoration: none;
+  padding: 8px 20px;
   border-radius: var(--border-radius);
-  transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
-  text-align: center;
+  text-decoration: none;
   font-weight: bold;
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .cta-button-1 {
   background-color: var(--accent-color-1);
   color: var(--light-text-color);
-}
-
-.cta-button-2 {
-  background-color: var(--accent-color-2);
-  color: var(--light-text-color);
-}
-
-.cta-button-1:hover, .cta-button-2:hover {
-  transform: translateY(-2px);
-  color: white;
+  border: 2px solid var(--secondary-color);
 }
 
 .cta-button-1:hover {
   background-color: var(--accent-color-1-darker);
 }
 
+.cta-button-2 {
+  background-color: var(--secondary-color);
+  color: var(--light-text-color);
+}
+
 .cta-button-2:hover {
-  background-color: var(--accent-color-2-darker);
+  background-color: var(--light-text-color);
+  color: var(--primary-color);
 }
 
-.cta-button-1:active, .cta-button-2:active {
-  transform: translateY(0);
+/* components/forms.css */
+.form {
+  margin: var(--spacing-medium) auto;
+  max-width: 500px;
 }
 
-/* ================================Star Rating Styles========================== */
-.star-rating {
-  display: inline-block;
-  font-family: 'Font Awesome 5 Free';
-  font-size: 1em;
-  font-weight: 550;
-  height: 1em;
-  line-height: 1;
-  overflow: hidden;
-  position: relative;
-  width: 5.4em;
+.form__input {
+  width: 100%;
+  padding: var(--spacing-small);
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  font-size: var(--base-font-size);
 }
 
-.star-rating::before {
-  content: "\f005\f005\f005\f005\f005\★";
-  float: left;
-  top: 0;
-  left: 0;
-  position: absolute;
-  color: rgb(210, 209, 209);
+.form__error {
+  color: var(--accent-color-1);
+  font-size: 0.9em;
+  margin-top: var(--spacing-small);
 }
 
-.star-rating span {
-  overflow: hidden;
-  float: left;
-  top: 0;
-  left: 0;
-  position: absolute;
-  padding-top: 1.5em;
+/* components/newsletter.css */
+.newsletter {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  padding: var(--spacing-large) 0;
+  text-align: center;
 }
 
-.star-rating span::before {
-  content: "\f005\f005\f005\f005\f005";
-  top: 0;
-  position: absolute;
-  left: 0;
-  color: #db7501;
-}
-
-/* ======================Loader Styles=================================== */
-.loader {
-  width: 40px;
-  height: 40px;
-  margin: 100px auto;
-  background-color: #333;
-  border-radius: 100%;  
-  animation: sk-scaleout 1.0s infinite ease-in-out;
-}
-
-@keyframes sk-scaleout {
-  0% { 
-      transform: scale(0);
-  } 100% {
-      transform: scale(1.0);
-      opacity: 0;
-  }
+.newsletter__form {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-small);
+  margin-top: var(--spacing-medium);
 }

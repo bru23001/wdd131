@@ -3,10 +3,10 @@
 ====================================================================================*/
 
 .hero-section {
-    background-color: var(--secondary-color);
-    color: var(--light-text-color);
+    background-color: var(--background-color);
+    color: var(--secondary-color);
     text-align: center;
-    padding: var(--spacing-medium) 0;
+    padding: var(--spacing-small) 0;
     position: relative;
 }
   
@@ -17,7 +17,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--secondary-color);
+    background: var(--background-color);
     z-index: 1;
 }
   
@@ -28,7 +28,7 @@
   
 .hero-section h1 {
     font-family: var(--heading-font-family);
-    font-size: 3em;
+    font-size: 30px;
     margin-bottom: var(--spacing-medium);
 }
 
