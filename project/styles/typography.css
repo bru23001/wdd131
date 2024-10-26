@@ -4,13 +4,11 @@
 
 .roboto-slab-body {
   font-family: var(--body-font-family);
-  font-optical-sizing: auto;
   font-weight: normal;
   font-style: normal;
 }
 .roboto-slab-nav {
   font-family: var(--body-font-family);
-  font-optical-sizing: auto;
   font-weight:bold;
   font-style: normal;
 }
