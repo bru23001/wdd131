@@ -145,7 +145,7 @@
     .two-column {
         grid-template-columns: 1fr;
     }
-
+  
     .book-card {
         margin-bottom: var(--spacing-medium);
     }

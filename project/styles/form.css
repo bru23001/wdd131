@@ -7,6 +7,31 @@ form {
     max-width: 500px;
 }
 
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox-text {
+    user-select: none;
+}
+
+.form-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+       
 
 label {
     display: block;
@@ -60,7 +85,33 @@ button[type="submit"]:hover {
   background-color: var(--accent-color-1-darker);
 } 
 
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
 
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.club-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+.club-card p {
+  margin: 0.5rem 0;
+}
+
+.club-card span[aria-label] {
+  margin-right: 0.5rem;
+}
 
 @media (min-width: 600px) {
   form {
