@@ -58,8 +58,6 @@ header {
 /* Burger Menu Button */
 
 #menu {
-    display: none;
-    background: none;
     border: none;
     color: white;
     font-size: 24px;

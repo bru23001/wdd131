@@ -7,23 +7,17 @@
  * including navigation, form validation, lazy loading, and local storage.
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-    const menuButton = document.getElementById('menu');
-    const flexContainer = document.querySelector('.flex-container');
+document.addEventListener('DOMContentLoaded', function () {
+
+    const hamButton = document.querySelector("#menu");
+    const navigation = document.querySelector(".nav-links");
+
     
-    menuButton.addEventListener('click', () => {
-        flexContainer.classList.toggle('open');
-        menuButton.textContent = flexContainer.classList.contains('open') ? '✕' : '☰';
+    hamButton.addEventListener("click", () => {
+        navigation.classList.toggle("open");
+        hamButton.textContent = navigation.classList.contains("open") ? "✖" : "☰"; // Toggle icon text
     });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (event) => {
-        if (!flexContainer.contains(event.target)) {
-            flexContainer.classList.remove('open');
-            menuButton.textContent = '☰';
-        }
-    });
-});
 
     //=============================FORM_HANDLING================================
     const form = document.getElementById('newsletter-form');
@@ -147,8 +141,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
+});
     //=============================FOOTER_UPDATES===============================
-    // Update copyright year and last modified date
-    document.getElementById("current-year").textContent = new Date().getFullYear();
-    document.getElementById("last-modified").textContent = document.lastModified;
+
+    document.addEventListener('DOMContentLoaded', function () {
+        
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    
+        
+        document.getElementById("last-modified").textContent = document.lastModified;
+    });
