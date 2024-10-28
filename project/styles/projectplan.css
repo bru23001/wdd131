@@ -1,0 +1,17 @@
+body {
+    font-family: "Roboto Slab", serif;
+    color:#1E2B3A;
+}
+
+h1, h2 {
+    font-family: "Agdasima", sans-serif;
+    color:#00A3FF;
+}
+
+
+section, header {
+    margin: 20px;
+    padding: 25px;
+    border-bottom: 10px solid #b4b4b4;
+}
+
