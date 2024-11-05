@@ -1,0 +1,113 @@
+:root {
+    --primary-color: rgba(210, 16, 52, 1); /* Red for background */
+    --secondary-color: rgba(0, 120, 73, 1); /* Green for cards */
+    --text-color: white;
+    --font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+}
+
+header, footer {
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 600px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    opacity: 0.85;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.data {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.data h2 {
+    margin-bottom: 1rem;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.col-2 {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-align: right;
+}
+  
+.value {
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.weather {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+.weather h2 {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.weather svg {
+    width: 50px;
+    height: auto;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}

@@ -1,0 +1,169 @@
+:root {
+    --primary-color: #7da2a9;
+    --secondary-color: #f7f7f7; 
+    --text-color: #000000;
+    --font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    color: var(--text-color);
+    text-align: center;
+    padding: 1.5rem;
+    width: 100%;
+    position: fixed;
+    background-color: var(--secondary-color);
+    z-index: 1000;
+}
+
+header {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+}
+
+main {
+    flex-grow: 1;
+    margin-top: 1rem;
+    margin-bottom: 6rem;
+}
+  
+h1 {
+    font-size: 3rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+
+aside {
+    background-color: var(--secondary-color);
+    padding: .5rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    font-size: 2rem; 
+    color: var(--text-color);
+    padding: 1rem; 
+    text-align: left; 
+    background-color: var(--secondary-color); 
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+    opacity: 0.85;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+
+.col-2 {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: right;
+}
+  
+.value {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.info,
+.weather {
+    text-align: center;
+}
+
+.weather svg {
+    width: 100px;
+    height: auto;
+}
+
+.weather h2::after {
+    position: absolute;
+    right: 3rem;
+    top: 1.25rem;
+}
+
+
+  
+@media (min-width: 600px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+   
+
+    h2 {
+        font-size: 2rem; 
+        color: var(--text-color);
+        padding: 1rem; 
+        text-align: left; 
+        background-color: var(--secondary-color); 
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+
+    main {
+        position: relative;
+    }
+
+   .card {
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+        opacity: 0.85;
+        border-radius: 8px;
+        padding: 1rem;
+    }
+
+
+
+    .info {
+        position: absolute;
+        top: 200px;
+        left: 40px;
+        z-index: 1;
+    }
+
+    .weather {
+        position: absolute;
+        bottom: 200px;
+        right: 40px;
+    }
+
+    
+    #weather-icon {
+        display: none;
+     }
+}
+
